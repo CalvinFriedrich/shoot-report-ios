@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42555354E87CD6ADFDDB2F11 /* Pods_shoot_report_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418D53731FDD2226C53347CE /* Pods_shoot_report_ios_v2.framework */; };
+		BE9E745A261DE86900ADCE84 /* TrainingGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E7459261DE86900ADCE84 /* TrainingGraph.swift */; };
 		BED80EAA260CE48A00917DA5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED80EA9260CE48A00917DA5 /* Launch Screen.storyboard */; };
 		BEDC01E2261C535500528CEA /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BEDC01E1261C535500528CEA /* SwiftUICharts */; };
 		BEE8EEC8260244DD0043BBD3 /* shoot_report_ios_v2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE8EEC7260244DD0043BBD3 /* shoot_report_ios_v2App.swift */; };
@@ -57,6 +58,7 @@
 		7801CB49B3D1C3EEC1B254D9 /* Pods-shoot-report-ios_v2-shoot-report-ios_v2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shoot-report-ios_v2-shoot-report-ios_v2UITests.debug.xcconfig"; path = "Target Support Files/Pods-shoot-report-ios_v2-shoot-report-ios_v2UITests/Pods-shoot-report-ios_v2-shoot-report-ios_v2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F6A34ADC091BC62CF713A33 /* Pods-shoot-report-ios_v2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shoot-report-ios_v2Tests.release.xcconfig"; path = "Target Support Files/Pods-shoot-report-ios_v2Tests/Pods-shoot-report-ios_v2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		90D345091BB29F4A87AA3B6A /* Pods_shoot_report_ios_v2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shoot_report_ios_v2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE9E7459261DE86900ADCE84 /* TrainingGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingGraph.swift; sourceTree = "<group>"; };
 		BED80EA9260CE48A00917DA5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BEE8EEC4260244DD0043BBD3 /* shoot-report-ios_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shoot-report-ios_v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE8EEC7260244DD0043BBD3 /* shoot_report_ios_v2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoot_report_ios_v2App.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				BEE8EF1D260357E80043BBD3 /* TrainingListView.swift */,
 				BEE8EF272603586D0043BBD3 /* TrainingRow.swift */,
 				BEE8EF22260357F70043BBD3 /* TrainingStatsView.swift */,
+				BE9E7459261DE86900ADCE84 /* TrainingGraph.swift */,
 				BEF7D5F3261368CD008AAC45 /* TrainingAdd.swift */,
 				BEE8EF49260A3E3B0043BBD3 /* TrainingEditor.swift */,
 			);
@@ -489,6 +492,7 @@
 			files = (
 				BEE8EF1E260357E80043BBD3 /* TrainingListView.swift in Sources */,
 				BEF7D5EF26136675008AAC45 /* DB_Manager.swift in Sources */,
+				BE9E745A261DE86900ADCE84 /* TrainingGraph.swift in Sources */,
 				BEE8EF2D26035B2F0043BBD3 /* TrainingModel.swift in Sources */,
 				BEE8EEFB2602488A0043BBD3 /* WeaponRow.swift in Sources */,
 				BEF7D5F4261368CD008AAC45 /* TrainingAdd.swift in Sources */,

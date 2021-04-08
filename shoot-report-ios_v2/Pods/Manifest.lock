@@ -1,18 +1,30 @@
 PODS:
+  - AAInfographics (6.0.0)
   - SQLite.swift (0.12.2):
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
 
 DEPENDENCIES:
+  - AAInfographics (from `https://github.com/AAChartModel/AAChartKit-Swift.git`)
   - SQLite.swift (~> 0.12.0)
 
 SPEC REPOS:
   trunk:
     - SQLite.swift
 
+EXTERNAL SOURCES:
+  AAInfographics:
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
+CHECKOUT OPTIONS:
+  AAInfographics:
+    :commit: b935fa78fe91eccb90cd68cdeca237473345a9f9
+    :git: https://github.com/AAChartModel/AAChartKit-Swift.git
+
 SPEC CHECKSUMS:
+  AAInfographics: e57c6cc15ddc17df3555db6f586fb0e1b911a0b7
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 4a45ae71e005bf1e8ebc225bff33ff846fceba34
+PODFILE CHECKSUM: f41a3b812d102630c5ad5daca32ae5e86c380b48
 
 COCOAPODS: 1.10.1

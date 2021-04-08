@@ -7,6 +7,7 @@ target 'shoot-report-ios_v2' do
 
   # Pods for shoot-report-ios_v2
 	pod 'SQLite.swift', '~> 0.12.0'
+	pod 'AAInfographics', :git => 'https://github.com/AAChartModel/AAChartKit-Swift.git'
 
   target 'shoot-report-ios_v2Tests' do
     inherit! :search_paths

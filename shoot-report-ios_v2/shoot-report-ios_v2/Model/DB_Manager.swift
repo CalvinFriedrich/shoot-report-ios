@@ -279,7 +279,7 @@ class DB_Manager {
     
     public func getGraph(weaponid: Int64) -> ([Double], [Double]) {
         var wholeRings: [Double] = []
-        var tenthrings: [Double] = []
+        var tenthRings: [Double] = []
         
         //get all trainings in ascending order
         trainings = trainings.order(id.asc)
@@ -295,7 +295,7 @@ class DB_Manager {
                 if floor(rings) == rings {
                     wholeRings.append(rings)
                 } else {
-                    tenthrings.append(rings)
+                    tenthRings.append(rings)
                 }
                 
             }
@@ -303,7 +303,7 @@ class DB_Manager {
             print(error.localizedDescription)
         }
         
-        return (wholeRings, tenthrings)
+        return (wholeRings, tenthRings)
     }
     
     
