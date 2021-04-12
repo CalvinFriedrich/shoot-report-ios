@@ -32,7 +32,7 @@ struct WeaponDetail: View {
                 }
                 .tag(Tab.training)
             
-            Text("Tab Content 2")
+            CompetitionView(rifleid: rifleid)
                 .tabItem {
                     Label("Competition", systemImage: "star.fill") }
                 .tag(Tab.competition)

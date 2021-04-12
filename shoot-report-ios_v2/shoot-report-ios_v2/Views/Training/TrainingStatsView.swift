@@ -10,16 +10,18 @@ import SwiftUI
 struct TrainingStatsView: View {
     @State var whole: [Double] = [5]
     @State var tenth: [Double] = []
+    @State var datesWhole: [String] = []
+    @State var datesTenth: [String] = []
     var rifleid: Int64
     
     var body: some View {
         VStack {
-            TrainingGraph(data: $whole)
+            TrainingGraph(data: $whole, dates: $datesWhole, whole: true)
 
-            TrainingGraph(data: $tenth)
+            TrainingGraph(data: $tenth, dates: $datesTenth, whole: false)
         }
         .onAppear(perform: {
-            (self.whole, self.tenth) = DB_Manager().getGraph(weaponid: rifleid)
+            (self.whole, self.tenth, self.datesWhole, self.datesTenth) = DB_Manager().getTrainingGraph(weaponid: rifleid)
         })
     }
 }

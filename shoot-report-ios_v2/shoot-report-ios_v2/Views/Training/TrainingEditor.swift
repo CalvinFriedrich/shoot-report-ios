@@ -269,6 +269,7 @@ struct TrainingEditor: View {
             
             numOfShots = String(count)
         })
+        .disableAutocorrection(true)
     }
 }
 

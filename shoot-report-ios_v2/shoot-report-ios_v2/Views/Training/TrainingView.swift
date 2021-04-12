@@ -21,9 +21,7 @@ struct TrainingView: View {
 }
 
 struct TrainingView_Previews: PreviewProvider {
-    @State static var id: Int64 = 0
-    
     static var previews: some View {
-        TrainingView(rifleid: id)
+        TrainingView(rifleid: 0)
     }
 }

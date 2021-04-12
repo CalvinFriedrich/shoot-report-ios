@@ -1,16 +1,14 @@
 //
-//  TrainingGraph.swift
+//  CompetitionGraph.swift
 //  shoot-report-ios_v2
 //
-//  Created by Calvin Friedrich on 07.04.21.
+//  Created by Calvin Friedrich on 08.04.21.
 //
-
-
 
 import SwiftUI
 import AAInfographics
 
-struct TrainingGraphUIView: UIViewRepresentable {
+struct CompetitionGraphUIView: UIViewRepresentable {
     @Binding var dataSet: [Double]
     @Binding var dateArray: [String]
     var whole: Bool
@@ -32,11 +30,11 @@ struct TrainingGraphUIView: UIViewRepresentable {
         
         if whole == true {
             aaChartModel
-                .title("Ø Shot whole rings")
+                .title("Competition whole rings")
                 .colorsTheme(["#0AE20A"])
         } else {
             aaChartModel
-                .title("Ø Shot tenth of a ring")
+                .title("Competition tenth of a ring")
                 .colorsTheme(["#0E2435"])
         }
             
@@ -52,7 +50,7 @@ struct TrainingGraphUIView: UIViewRepresentable {
     }
 }
 
-struct TrainingGraph: View {
+struct CompetitionGraph: View {
     @Binding var data: [Double]
     @Binding var dates: [String]
     var whole: Bool
@@ -62,10 +60,10 @@ struct TrainingGraph: View {
 }
 
 
-//struct TrainingGraph_Previews: PreviewProvider {
+//struct CompetitionGraph_Previews: PreviewProvider {
 //    @State static var def = [4.5, 5.5]
-//    @State static var datum = ["14. April", "05.06."]
+//    @State static var dates = ["14. April", "05.06."]
 //    static var previews: some View {
-//        TrainingGraph(data: def, dates: datum)
+//        TrainingGraph(data: def, dates: dates)
 //    }
 //}

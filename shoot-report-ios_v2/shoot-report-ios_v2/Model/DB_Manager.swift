@@ -10,6 +10,7 @@ import SQLite
 
 class DB_Manager {
     private var db: Connection!
+    
     private var trainings: Table!
     
     private var id: Expression<Int64>!
@@ -22,6 +23,17 @@ class DB_Manager {
     private var score: Expression<Double>!
     private var comment: Expression<String>!
     private var rifleid: Expression<Int64>!
+    
+    private var competitions: Table!
+    
+    private var comp_id: Expression<Int64>!
+    private var competitionCase: Expression<String>!
+    private var comp_place: Expression<String>!
+    private var comp_date: Expression<Date>!
+    private var comp_shots: Expression<String>!
+    private var comp_score: Expression<Double>!
+    private var comp_comment: Expression<String>!
+    private var comp_rifleid: Expression<Int64>!
     
     private var weapons: Table!
     
@@ -62,6 +74,19 @@ class DB_Manager {
             name = Expression<String>("name")
             shown = Expression<Bool>("shown")
             
+            //creating table object
+            competitions = Table("competitions")
+            
+            //create instances of each column
+            comp_id = Expression<Int64>("comp_id")
+            competitionCase = Expression<String>("competitionCase")
+            comp_place = Expression<String>("comp_place")
+            comp_date = Expression<Date>("comp_date")
+            comp_shots = Expression<String>("comp_shots")
+            comp_score = Expression<Double>("comp_score")
+            comp_comment = Expression<String>("comp_comment")
+            comp_rifleid = Expression<Int64>("comp_rifleid")
+            
             //create the table
             try db.run(trainings.create(ifNotExists: true) { (t) in
                 t.column(id, primaryKey: true)
@@ -79,6 +104,16 @@ class DB_Manager {
                 t.column(weaponid, primaryKey: true)
                 t.column(name)
                 t.column(shown)
+            })
+            try db.run(competitions.create(ifNotExists: true) { (t) in
+                t.column(comp_id, primaryKey: true)
+                t.column(competitionCase)
+                t.column(comp_place)
+                t.column(comp_date)
+                t.column(comp_shots)
+                t.column(comp_score)
+                t.column(comp_comment)
+                t.column(comp_rifleid)
             })
             
             //check if the weapons have been filled with the initial data
@@ -276,10 +311,110 @@ class DB_Manager {
     }
     
     
+    public func addCompetition(competitionValue: String, placeValue: String, dateValue: Date, shotsValue: String, scoreValue: Double, commentValue: String, rifleidValue: Int64) {
+        do {
+            print("Hi")
+            try db.run(competitions.insert(competitionCase <- competitionValue, comp_place <- placeValue, comp_date <- dateValue, comp_shots <- shotsValue, comp_score <- scoreValue, comp_comment <- commentValue, comp_rifleid <- rifleidValue))
+            print("Bye")
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     
-    public func getGraph(weaponid: Int64) -> ([Double], [Double]) {
+    public func deleteCompetition(idValue: Int64) {
+        do {
+            //get competition using id
+            let competition: Table = competitions.filter(comp_id == idValue)
+            
+            //run the delete query
+            try db.run(competition.delete())
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    public func getCompetitions(weaponid: Int64) -> [CompetitionModel] {
+        //create empty array
+        var competitionModels: [CompetitionModel] = []
+        
+        //get all competitions in ascending order
+        competitions = competitions.order(id.asc)
+        
+        //exception handling
+        do {
+            
+            //loop through all competitions
+            for competition in try db.prepare(competitions.filter(weaponid == comp_rifleid)) {
+                
+                //create new model in each iteration
+                let competitionModel: CompetitionModel = CompetitionModel()
+                
+                //set values in model from database
+                competitionModel.id = competition[comp_id]
+                competitionModel.competitionCase = competition[competitionCase]
+                competitionModel.place = competition[comp_place]
+                competitionModel.date = competition[comp_date]
+                competitionModel.shots = competition[comp_shots]
+                competitionModel.score = competition[comp_score]
+                competitionModel.comment = competition[comp_comment]
+                
+                //append in new array
+                competitionModels.append(competitionModel)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return competitionModels
+    }
+    
+    public func updateCompetition(idValue: Int64, competitionValue: String, placeValue: String, dateValue: Date, shotsValue: String, scoreValue: Double, commentValue: String, rifleidValue: Int64) {
+        do {
+            //get competition using id
+            let competition: Table = competitions.filter(comp_id == idValue)
+            
+            //run the update query
+            try db.run(competition.update(competitionCase <- competitionValue, comp_place <- placeValue, comp_date <- dateValue, comp_shots <- shotsValue, comp_score <- scoreValue, comp_comment <- commentValue, comp_rifleid <- rifleidValue))
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    public func getCompetition(idValue: Int64) -> CompetitionModel {
+        //create an empty object
+        let competitionModel: CompetitionModel = CompetitionModel()
+        
+        //exception handling
+        do {
+            
+            //get competition using id
+            let competition: AnySequence<Row> = try db.prepare(competitions.filter(comp_id == idValue))
+            
+            //get row
+            try competition.forEach({ rowValue in
+                //set values in model
+                competitionModel.id = try rowValue.get(comp_id)
+                competitionModel.competitionCase = try rowValue.get(competitionCase)
+                competitionModel.place = try rowValue.get(comp_place)
+                competitionModel.date = try rowValue.get(comp_date)
+                competitionModel.shots = try rowValue.get(comp_shots)
+                competitionModel.score = try rowValue.get(comp_score)
+                competitionModel.comment = try rowValue.get(comp_comment)
+                competitionModel.rifleid = try rowValue.get(comp_rifleid)
+            })
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return competitionModel
+    }
+    
+    
+    public func getTrainingGraph(weaponid: Int64) -> ([Double], [Double], [String], [String]) {
         var wholeRings: [Double] = []
         var tenthRings: [Double] = []
+        var wholeDates: [String] = []
+        var tenthDates: [String] = []
         
         //get all trainings in ascending order
         trainings = trainings.order(id.asc)
@@ -290,12 +425,18 @@ class DB_Manager {
             //loop through all trainings
             for training in try db.prepare(trainings.filter(weaponid == rifleid)) {
                 let rings = training[score]
+                let helper:Date = training[date]
+                let formatter1 = DateFormatter()
+                formatter1.dateStyle = .short
+                let date = (formatter1.string(from: helper))
                 
                 //check if the result is an integer (= a score with whole rings)
                 if floor(rings) == rings {
                     wholeRings.append(rings)
+                    wholeDates.append(date)
                 } else {
                     tenthRings.append(rings)
+                    tenthDates.append(date)
                 }
                 
             }
@@ -303,9 +444,45 @@ class DB_Manager {
             print(error.localizedDescription)
         }
         
-        return (wholeRings, tenthRings)
+        return (wholeRings, tenthRings, wholeDates, tenthDates)
     }
     
+    public func getCompetitionGraph(weaponid: Int64) -> ([Double], [Double], [String], [String]) {
+        var wholeRings: [Double] = []
+        var tenthRings: [Double] = []
+        var wholeDates: [String] = []
+        var tenthDates: [String] = []
+        
+        //get all competitions in ascending order
+        competitions = competitions.order(id.asc)
+        
+        //exception handling
+        do {
+            
+            //loop through all competitions
+            for competition in try db.prepare(competitions.filter(weaponid == comp_rifleid)) {
+                let rings = competition[comp_score]
+                let helper:Date = competition[comp_date]
+                let formatter1 = DateFormatter()
+                formatter1.dateStyle = .short
+                let date = (formatter1.string(from: helper))
+                
+                //check if the result is an integer (= a score with whole rings)
+                if floor(rings) == rings {
+                    wholeRings.append(rings)
+                    wholeDates.append(date)
+                } else {
+                    tenthRings.append(rings)
+                    tenthDates.append(date)
+                }
+                
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return (wholeRings, tenthRings, wholeDates, tenthDates)
+    }
     
     
     //function to fill the weapon table with initial data

@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		42555354E87CD6ADFDDB2F11 /* Pods_shoot_report_ios_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418D53731FDD2226C53347CE /* Pods_shoot_report_ios_v2.framework */; };
 		BE9E745A261DE86900ADCE84 /* TrainingGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E7459261DE86900ADCE84 /* TrainingGraph.swift */; };
+		BE9E745F261F4FEC00ADCE84 /* CompetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E745E261F4FEC00ADCE84 /* CompetitionView.swift */; };
+		BE9E7468261F521400ADCE84 /* CompetitionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E7467261F521400ADCE84 /* CompetitionListView.swift */; };
+		BE9E746D261F523400ADCE84 /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E746C261F523400ADCE84 /* CompetitionModel.swift */; };
+		BE9E7472261F53E600ADCE84 /* CompetitionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E7471261F53E600ADCE84 /* CompetitionRow.swift */; };
+		BE9E7477261F54CD00ADCE84 /* CompetitionStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E7476261F54CD00ADCE84 /* CompetitionStatsView.swift */; };
+		BE9E747C261F556800ADCE84 /* CompetitionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E747B261F556800ADCE84 /* CompetitionGraph.swift */; };
+		BE9E7481261F55EF00ADCE84 /* CompetitionAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E7480261F55EF00ADCE84 /* CompetitionAdd.swift */; };
+		BE9E7489261F57A000ADCE84 /* CompetitionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E7488261F57A000ADCE84 /* CompetitionEditor.swift */; };
+		BE9E748E2620AE7D00ADCE84 /* TrainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E748D2620AE7D00ADCE84 /* TrainerView.swift */; };
 		BED80EAA260CE48A00917DA5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED80EA9260CE48A00917DA5 /* Launch Screen.storyboard */; };
 		BEDC01E2261C535500528CEA /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BEDC01E1261C535500528CEA /* SwiftUICharts */; };
 		BEE8EEC8260244DD0043BBD3 /* shoot_report_ios_v2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE8EEC7260244DD0043BBD3 /* shoot_report_ios_v2App.swift */; };
@@ -59,6 +68,15 @@
 		8F6A34ADC091BC62CF713A33 /* Pods-shoot-report-ios_v2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shoot-report-ios_v2Tests.release.xcconfig"; path = "Target Support Files/Pods-shoot-report-ios_v2Tests/Pods-shoot-report-ios_v2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		90D345091BB29F4A87AA3B6A /* Pods_shoot_report_ios_v2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shoot_report_ios_v2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9E7459261DE86900ADCE84 /* TrainingGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingGraph.swift; sourceTree = "<group>"; };
+		BE9E745E261F4FEC00ADCE84 /* CompetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionView.swift; sourceTree = "<group>"; };
+		BE9E7467261F521400ADCE84 /* CompetitionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListView.swift; sourceTree = "<group>"; };
+		BE9E746C261F523400ADCE84 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
+		BE9E7471261F53E600ADCE84 /* CompetitionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionRow.swift; sourceTree = "<group>"; };
+		BE9E7476261F54CD00ADCE84 /* CompetitionStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionStatsView.swift; sourceTree = "<group>"; };
+		BE9E747B261F556800ADCE84 /* CompetitionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionGraph.swift; sourceTree = "<group>"; };
+		BE9E7480261F55EF00ADCE84 /* CompetitionAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionAdd.swift; sourceTree = "<group>"; };
+		BE9E7488261F57A000ADCE84 /* CompetitionEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionEditor.swift; sourceTree = "<group>"; };
+		BE9E748D2620AE7D00ADCE84 /* TrainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerView.swift; sourceTree = "<group>"; };
 		BED80EA9260CE48A00917DA5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BEE8EEC4260244DD0043BBD3 /* shoot-report-ios_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shoot-report-ios_v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE8EEC7260244DD0043BBD3 /* shoot_report_ios_v2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoot_report_ios_v2App.swift; sourceTree = "<group>"; };
@@ -140,6 +158,28 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BE9E7463261F4FF400ADCE84 /* Competition */ = {
+			isa = PBXGroup;
+			children = (
+				BE9E745E261F4FEC00ADCE84 /* CompetitionView.swift */,
+				BE9E7467261F521400ADCE84 /* CompetitionListView.swift */,
+				BE9E7471261F53E600ADCE84 /* CompetitionRow.swift */,
+				BE9E7476261F54CD00ADCE84 /* CompetitionStatsView.swift */,
+				BE9E747B261F556800ADCE84 /* CompetitionGraph.swift */,
+				BE9E7480261F55EF00ADCE84 /* CompetitionAdd.swift */,
+				BE9E7488261F57A000ADCE84 /* CompetitionEditor.swift */,
+			);
+			path = Competition;
+			sourceTree = "<group>";
+		};
+		BE9E74922620AE8300ADCE84 /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				BE9E748D2620AE7D00ADCE84 /* TrainerView.swift */,
+			);
+			path = Trainer;
+			sourceTree = "<group>";
+		};
 		BEE8EEBB260244DD0043BBD3 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +207,7 @@
 			children = (
 				BEE8EEC7260244DD0043BBD3 /* shoot_report_ios_v2App.swift */,
 				BEE8EF09260255B20043BBD3 /* Views */,
+				BE9E74922620AE8300ADCE84 /* Trainer */,
 				BEE8EF0A260255BE0043BBD3 /* Model */,
 				BEE8EECB260244DF0043BBD3 /* Assets.xcassets */,
 				BEE8EED0260244DF0043BBD3 /* Info.plist */,
@@ -208,6 +249,7 @@
 				BEE8EEC9260244DD0043BBD3 /* ContentView.swift */,
 				BEE8EF3126039CB40043BBD3 /* WeaponView */,
 				BEE8EF3526039CBF0043BBD3 /* Training */,
+				BE9E7463261F4FF400ADCE84 /* Competition */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +259,7 @@
 			children = (
 				BEE8EF0426024EA50043BBD3 /* WeaponModel.swift */,
 				BEE8EF2C26035B2F0043BBD3 /* TrainingModel.swift */,
+				BE9E746C261F523400ADCE84 /* CompetitionModel.swift */,
 				BEF7D5EE26136675008AAC45 /* DB_Manager.swift */,
 			);
 			path = Model;
@@ -490,18 +533,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9E7468261F521400ADCE84 /* CompetitionListView.swift in Sources */,
 				BEE8EF1E260357E80043BBD3 /* TrainingListView.swift in Sources */,
 				BEF7D5EF26136675008AAC45 /* DB_Manager.swift in Sources */,
 				BE9E745A261DE86900ADCE84 /* TrainingGraph.swift in Sources */,
 				BEE8EF2D26035B2F0043BBD3 /* TrainingModel.swift in Sources */,
 				BEE8EEFB2602488A0043BBD3 /* WeaponRow.swift in Sources */,
+				BE9E7472261F53E600ADCE84 /* CompetitionRow.swift in Sources */,
+				BE9E7489261F57A000ADCE84 /* CompetitionEditor.swift in Sources */,
 				BEF7D5F4261368CD008AAC45 /* TrainingAdd.swift in Sources */,
+				BE9E745F261F4FEC00ADCE84 /* CompetitionView.swift in Sources */,
 				BEE8EF23260357F70043BBD3 /* TrainingStatsView.swift in Sources */,
+				BE9E746D261F523400ADCE84 /* CompetitionModel.swift in Sources */,
 				BEE8EEF6260245460043BBD3 /* WeaponsListView.swift in Sources */,
 				BEE8EF282603586D0043BBD3 /* TrainingRow.swift in Sources */,
+				BE9E7481261F55EF00ADCE84 /* CompetitionAdd.swift in Sources */,
 				BEE8EF0C260256160043BBD3 /* WeaponDetail.swift in Sources */,
+				BE9E7477261F54CD00ADCE84 /* CompetitionStatsView.swift in Sources */,
 				BEE8EF1126025A9E0043BBD3 /* TrainingView.swift in Sources */,
 				BEE8EECA260244DD0043BBD3 /* ContentView.swift in Sources */,
+				BE9E747C261F556800ADCE84 /* CompetitionGraph.swift in Sources */,
+				BE9E748E2620AE7D00ADCE84 /* TrainerView.swift in Sources */,
 				BEE8EEC8260244DD0043BBD3 /* shoot_report_ios_v2App.swift in Sources */,
 				BEE8EF0526024EA50043BBD3 /* WeaponModel.swift in Sources */,
 				BEE8EF4A260A3E3B0043BBD3 /* TrainingEditor.swift in Sources */,

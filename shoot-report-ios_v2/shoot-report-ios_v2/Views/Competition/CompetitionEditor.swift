@@ -1,26 +1,26 @@
 //
-//  TrainingAdd.swift
+//  CompetitionEditor.swift
 //  shoot-report-ios_v2
 //
-//  Created by Calvin Friedrich on 30.03.21.
+//  Created by Calvin Friedrich on 08.04.21.
 //
 
 import SwiftUI
 import Combine
 
-struct TrainingAdd: View {
-    @State private var numOfShots = "0"
-    @State private var shots = ["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0"]
+struct CompetitionEditor: View {
+    var id: Int64
+    
     @State private var sumShots = 0.0
     
-    @State var moodEmote: TrainingModel.Mood = TrainingModel.Mood.happy
-    @State var training: String = ""
+    @State var competition: String = ""
     @State var place: String = ""
     @State var date: Date = Date()
-    @State var count: Int64 = 0
+    let count: Int64 = 6
+    @State var shots = ["0.0", "0.0", "0.0", "0.0", "0.0", "0.0"]
     @State var score: Double = 0
     @State var comment: String = ""
-    var rifleid: Int64
+    @State var rifleid: Int64 = 0
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
@@ -35,40 +35,22 @@ struct TrainingAdd: View {
         shotThree = Double(shots[5]) ?? 0.0
         let sumShotsSetTwo =  shotOne + shotTwo + shotThree
         
-        shotOne = Double(shots[6]) ?? 0.0
-        shotTwo = Double(shots[7]) ?? 0.0
-        shotThree = Double(shots[8]) ?? 0.0
-        let sumShotsSetThree = shotOne + shotTwo + shotThree
+        sumShots = sumShotsSetOne + sumShotsSetTwo
         
-        sumShots = sumShotsSetOne + sumShotsSetTwo + sumShotsSetThree
-        
-        count = Int64(numOfShots) ?? 0
-        
-        if count == 0 {
-            score = sumShots
-        } else {
-            score = sumShots / Double(count)
-        }
+        score = sumShots / Double(count)
     }
     
     var body: some View {
         List {
-            Picker("Mood", selection: $moodEmote) {
-                ForEach(TrainingModel.Mood.allCases) { mood in
-                    Text(mood.rawValue).tag(mood)
-                }
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            
             HStack {
-                Text("What did you train?").bold()
+                Text("Which mode did you shoot?").bold()
                 Divider()
-                TextField("Training", text: $training)
+                TextField("Competition", text: $competition)
                     .multilineTextAlignment(.trailing)
             }
  
             HStack {
-                Text("Where did you train?").bold()
+                Text("Where was your competition?").bold()
                 Divider()
                 TextField("Location", text: $place)
                     .multilineTextAlignment(.trailing)
@@ -89,7 +71,6 @@ struct TrainingAdd: View {
                         .background(Color.blue)
                         .cornerRadius(5)
                 })
-                .buttonStyle(PlainButtonStyle())
                 
                 Spacer()
                 
@@ -103,26 +84,13 @@ struct TrainingAdd: View {
                         .background(Color.blue)
                         .cornerRadius(5)
                 })
-                .buttonStyle(PlainButtonStyle())
             }
-            
-            HStack {
-                Text("Number of Shots").bold()
-                Divider()
-                TextField(numOfShots, text: $numOfShots)
-                    .keyboardType(.numberPad)
-                    .onReceive(Just(numOfShots)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.numOfShots = filtered
-                        }
-                }
-            }
+            .buttonStyle(PlainButtonStyle())
  
             VStack {
                 HStack {
                     VStack(spacing: 0.0) {
-                        Text("Shot 1").bold()
+                        Text("Series 1").bold()
                         TextField("0", text: $shots[0])
                             .multilineTextAlignment(.center)
                             .keyboardType(.decimalPad)
@@ -130,7 +98,7 @@ struct TrainingAdd: View {
                     .padding()
                     Divider()
                     VStack(spacing: 0.0) {
-                        Text("Shot 2").bold()
+                        Text("Series 2").bold()
                         TextField("0", text: $shots[1])
                             .multilineTextAlignment(.center)
                             .keyboardType(.decimalPad)
@@ -138,7 +106,7 @@ struct TrainingAdd: View {
                     .padding()
                     Divider()
                     VStack(spacing: 0.0) {
-                        Text("Shot 3").bold()
+                        Text("Series 3").bold()
                         TextField("0", text: $shots[2])
                             .multilineTextAlignment(.center)
                             .keyboardType(.decimalPad)
@@ -149,7 +117,7 @@ struct TrainingAdd: View {
  
                 HStack {
                     VStack(spacing: 0.0) {
-                        Text("Shot 4").bold()
+                        Text("Series 4").bold()
                         TextField("0", text: $shots[3])
                             .multilineTextAlignment(.center)
                             .keyboardType(.decimalPad)
@@ -157,7 +125,7 @@ struct TrainingAdd: View {
                     .padding()
                     Divider()
                     VStack(spacing: 0.0) {
-                        Text("Shot 5").bold()
+                        Text("Series 5").bold()
                         TextField("0", text: $shots[4])
                             .multilineTextAlignment(.center)
                             .keyboardType(.decimalPad)
@@ -165,57 +133,21 @@ struct TrainingAdd: View {
                     .padding()
                     Divider()
                     VStack(spacing: 0.0) {
-                        Text("Shot 6").bold()
+                        Text("Series 6").bold()
                         TextField("0", text: $shots[5])
                             .multilineTextAlignment(.center)
                             .keyboardType(.decimalPad)
                     }
                     .padding()
                 }
-                Divider()
-                HStack {
-                    VStack(spacing: 0.0) {
-                        Text("Shot 7").bold()
-                        TextField("0", text: $shots[6])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
-                    Divider()
-                    VStack(spacing: 0.0) {
-                        Text("Shot 8").bold()
-                        TextField("0", text: $shots[7])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
-                    Divider()
- 
-                    VStack(spacing: 0.0) {
-                        Text("Shot 9").bold()
-                        TextField("0", text: $shots[8])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
-                }
             }
             
+            Text("Total Rings: \(sumShots, specifier: "%.1f")")
+                .onChange(of: shots, perform: { value in
+                    result()
+            })
             
-            Group {
-                Text("Total Rings: \(sumShots, specifier: "%.1f")")
-                    .onChange(of: shots, perform: { value in
-                        result()
-                })
-                
-                
-                Text("Average: \(score, specifier: "%.2f")")
-                    .onChange(of: numOfShots, perform: { value in
-                        result()
-                    })
-            }
-            
-            TextField("Enter a comment here: ", text: $comment)
+            TextField("Competition report", text: $comment)
                 .frame(height: 70)
                 
             
@@ -236,8 +168,7 @@ struct TrainingAdd: View {
                 
                 Button(action: {
                     let shotsValue = shots.joined(separator: ",")
-                    //save training method
-                    DB_Manager().addTraining(moodEmoteValue: self.moodEmote.rawValue, trainingValue: self.training, placeValue: self.place, dateValue: self.date, countValue: self.count,shotsValue: shotsValue, scoreValue: self.score, commentValue: self.comment, rifleidValue: self.rifleid)
+                    DB_Manager().updateCompetition(idValue: self.id, competitionValue: self.competition, placeValue: self.place, dateValue: self.date, shotsValue: shotsValue, scoreValue: self.score, commentValue: self.comment, rifleidValue: self.rifleid)
                     //back to home menu
                     self.mode.wrappedValue.dismiss()
                 }, label: {
@@ -251,12 +182,26 @@ struct TrainingAdd: View {
                 .buttonStyle(PlainButtonStyle())
             }
         }
+        .onAppear(perform: {
+            //get data from database
+            let competitionModel: CompetitionModel = DB_Manager().getCompetition(idValue: self.id)
+            
+            //populate
+            self.competition = competitionModel.competitionCase
+            self.place = competitionModel.place
+            self.date = competitionModel.date
+            self.shots = competitionModel.shots.components(separatedBy: ",")
+            self.score = competitionModel.score
+            self.sumShots = score * Double(count)
+            self.comment = competitionModel.comment
+            self.rifleid = competitionModel.rifleid
+        })
         .disableAutocorrection(true)
     }
 }
 
-struct TrainingAdd_Previews: PreviewProvider {
+struct CompetitionEditor_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingAdd(rifleid: 0)
+        CompetitionEditor(id: 0)
     }
 }

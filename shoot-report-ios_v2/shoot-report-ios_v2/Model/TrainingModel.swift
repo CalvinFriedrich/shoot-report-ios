@@ -19,7 +19,6 @@ class TrainingModel: Identifiable {
     public var comment: String = ""
     public var rifleid: Int64 = 0
     
-    //tbd
     public var moodEmote = Mood.happy
     
     public enum Mood: String, CaseIterable, Identifiable {
