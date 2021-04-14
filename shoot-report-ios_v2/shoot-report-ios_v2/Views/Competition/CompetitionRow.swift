@@ -19,7 +19,7 @@ struct CompetitionRow: View {
         HStack {
             
             HStack(spacing: 30.0) {
-                Text("\(score, specifier: "%.2f")")
+                Text("\(score*6, specifier: "%.2f")")
                     .font(.title)
                 
                 VStack(alignment: .leading) {

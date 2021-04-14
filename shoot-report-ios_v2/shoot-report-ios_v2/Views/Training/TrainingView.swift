@@ -9,14 +9,26 @@ import SwiftUI
 
 struct TrainingView: View {
     var rifleid: Int64
+    @State private var selectedTab: Int = 0
     
     var body: some View {
-        TabView {
-            TrainingListView(rifleid: rifleid)
-                .tabItem { Text("TRAINING").font(.title) }
-            TrainingStatsView(rifleid: rifleid)
-                .tabItem { Text("STATISTICS").font(.title) }
+        
+        VStack {
+            Picker("Training", selection: $selectedTab) {
+                Text("TRAINING").tag(0)
+                Text("STATISTICS").tag(1)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            
+            switch selectedTab {
+                case 0: TrainingListView(rifleid: rifleid)
+                case 1: TrainingStatsView(rifleid: rifleid)
+                default: Text("Error")
+            }
         }
+        .onAppear(perform: {
+            selectedTab = 0
+        })
     }
 }
 

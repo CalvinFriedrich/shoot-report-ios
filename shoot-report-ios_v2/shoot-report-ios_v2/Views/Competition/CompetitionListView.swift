@@ -14,52 +14,31 @@ struct CompetitionListView: View {
     
     
     var body: some View {
-        ZStack {
-            List(competitions) { competition in
-                NavigationLink(
-                    destination: CompetitionEditor(id: competition.id)) {
+        List(competitions) { competition in
+            NavigationLink(
+                destination: CompetitionEditor(id: competition.id)) {
 
-                    HStack {
-                        CompetitionRow(idValue: competition.id)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            //create db manager instance
-                            let dbManager: DB_Manager = DB_Manager()
-                            
-                            //call delete function
-                            dbManager.deleteCompetition(idValue: competition.id)
-                            
-                            //refresh the competitions array
-                            self.competitions = dbManager.getCompetitions(weaponid: rifleid)
-                            
-                        }, label: {
-                            Image(systemName: "trash.fill")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                        })
-                        .buttonStyle(PlainButtonStyle())
-                    }
-                }
-            }
-            VStack {
-                Spacer()
-                
                 HStack {
+                    CompetitionRow(idValue: competition.id)
+                    
                     Spacer()
-                    NavigationLink(
-                        destination: CompetitionAdd(rifleid: rifleid),
-                            label: {
-                                Image(systemName: "plus")
-                                    .resizable()
-                                    .frame(width: 45, height: 45)
-                                    .padding()
-                                    .background(Color.green)
-                                    .clipShape(Circle())
-                                    .padding([.bottom, .trailing])
-                            }
-                    )
+                    
+                    Button(action: {
+                        //create db manager instance
+                        let dbManager: DB_Manager = DB_Manager()
+                        
+                        //call delete function
+                        dbManager.deleteCompetition(idValue: competition.id)
+                        
+                        //refresh the competitions array
+                        self.competitions = dbManager.getCompetitions(weaponid: rifleid)
+                        
+                    }, label: {
+                        Image(systemName: "trash.fill")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                    })
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
         }

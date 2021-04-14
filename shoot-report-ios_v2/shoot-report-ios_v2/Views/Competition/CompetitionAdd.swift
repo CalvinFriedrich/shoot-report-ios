@@ -9,6 +9,8 @@ import SwiftUI
 import Combine
 
 struct CompetitionAdd: View {
+    @State private var showingAlert = true
+    
     @State private var shots = ["0.0", "0.0", "0.0", "0.0", "0.0", "0.0"]
     @State private var sumShots = 0.0
     private let count: Int64 = 6
@@ -39,150 +41,155 @@ struct CompetitionAdd: View {
     }
     
     var body: some View {
-        List {
-            HStack {
-                Text("Which mode did you shoot?").bold()
-                Divider()
-                TextField("Competition", text: $competition)
-                    .multilineTextAlignment(.trailing)
-            }
- 
-            HStack {
-                Text("Where was your competition?").bold()
-                Divider()
-                TextField("Location", text: $place)
-                    .multilineTextAlignment(.trailing)
-            }
-            
-            DatePicker(selection: $date, displayedComponents: .date) {
-                Text("Date").bold()
-            }
-            
-            HStack {
-                Button(action: {
-                    print("Button 1 tapped")
-                }, label: {
-                    Text("PHOTO")
-                        .foregroundColor(.white)
-                        .padding()
-                        .padding([.leading, .trailing], 45)
-                        .background(Color.blue)
-                        .cornerRadius(5)
-                })
-                .buttonStyle(PlainButtonStyle())
-                
-                Spacer()
-                
-                Button(action: {
-                    print("Button 2 tapped")
-                }, label: {
-                    Text("QR CODE")
-                        .foregroundColor(.white)
-                        .padding()
-                        .padding([.leading, .trailing], 45)
-                        .background(Color.blue)
-                        .cornerRadius(5)
-                })
-                .buttonStyle(PlainButtonStyle())
-            }
- 
-            VStack {
+        GeometryReader { geometry in
+            List {
                 HStack {
-                    VStack(spacing: 0.0) {
-                        Text("Series 1").bold()
-                        TextField("0", text: $shots[0])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
+                    Text("Which mode did you shoot?").bold()
                     Divider()
-                    VStack(spacing: 0.0) {
-                        Text("Series 2").bold()
-                        TextField("0", text: $shots[1])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
-                    Divider()
-                    VStack(spacing: 0.0) {
-                        Text("Series 3").bold()
-                        TextField("0", text: $shots[2])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
+                    TextField("Competition", text: $competition)
+                        .multilineTextAlignment(.trailing)
                 }
-                Divider()
- 
+     
                 HStack {
-                    VStack(spacing: 0.0) {
-                        Text("Series 4").bold()
-                        TextField("0", text: $shots[3])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
-                    }
-                    .padding()
+                    Text("Where was your competition?").bold()
                     Divider()
-                    VStack(spacing: 0.0) {
-                        Text("Series 5").bold()
-                        TextField("0", text: $shots[4])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
+                    TextField("Location", text: $place)
+                        .multilineTextAlignment(.trailing)
+                }
+                
+                DatePicker(selection: $date, displayedComponents: .date) {
+                    Text("Date").bold()
+                }
+                
+                HStack {
+                    Button(action: {
+                        showingAlert = true
+                    }, label: {
+                        Text("PHOTO")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: geometry.size.width * 0.45)
+                            .background(Color.blue)
+                            .cornerRadius(5)
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        showingAlert = true
+                    }, label: {
+                        Text("QR CODE")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: geometry.size.width * 0.45)
+                            .background(Color.blue)
+                            .cornerRadius(5)
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                }
+     
+                VStack {
+                    HStack {
+                        VStack(spacing: 0.0) {
+                            Text("Series 1").bold()
+                            TextField("0", text: $shots[0])
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
+                        }
+                        .padding()
+                        Divider()
+                        VStack(spacing: 0.0) {
+                            Text("Series 2").bold()
+                            TextField("0", text: $shots[1])
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
+                        }
+                        .padding()
+                        Divider()
+                        VStack(spacing: 0.0) {
+                            Text("Series 3").bold()
+                            TextField("0", text: $shots[2])
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
+                        }
+                        .padding()
                     }
-                    .padding()
                     Divider()
-                    VStack(spacing: 0.0) {
-                        Text("Series 6").bold()
-                        TextField("0", text: $shots[5])
-                            .multilineTextAlignment(.center)
-                            .keyboardType(.decimalPad)
+     
+                    HStack {
+                        VStack(spacing: 0.0) {
+                            Text("Series 4").bold()
+                            TextField("0", text: $shots[3])
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
+                        }
+                        .padding()
+                        Divider()
+                        VStack(spacing: 0.0) {
+                            Text("Series 5").bold()
+                            TextField("0", text: $shots[4])
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
+                        }
+                        .padding()
+                        Divider()
+                        VStack(spacing: 0.0) {
+                            Text("Series 6").bold()
+                            TextField("0", text: $shots[5])
+                                .multilineTextAlignment(.center)
+                                .keyboardType(.decimalPad)
+                        }
+                        .padding()
                     }
-                    .padding()
+                }
+                
+                Text("Total Rings: \(sumShots, specifier: "%.1f")")
+                    .onChange(of: shots, perform: { value in
+                        result()
+                })
+                
+                TextField("Competition report", text: $comment)
+                    .frame(height: 70)
+                    
+                
+                HStack {
+                    Button(action: {
+                        showingAlert = true
+                    }, label: {
+                        Text("SHARE")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: geometry.size.width * 0.45)
+                            .background(Color.blue)
+                            .cornerRadius(5)
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        let shotsValue = shots.joined(separator: ",")
+                        //save training method
+                        DB_Manager().addCompetition(competitionValue: self.competition, placeValue: self.place, dateValue: self.date, shotsValue: shotsValue, scoreValue: self.score, commentValue: self.comment, rifleidValue: self.rifleid)
+                        //back to home menu
+                        self.mode.wrappedValue.dismiss()
+                    }, label: {
+                        Text("SAVE")
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: geometry.size.width * 0.45)
+                            .background(Color.blue)
+                            .cornerRadius(5)
+                    })
+                    .buttonStyle(PlainButtonStyle())
                 }
             }
-            
-            Text("Total Rings: \(sumShots, specifier: "%.1f")")
-                .onChange(of: shots, perform: { value in
-                    result()
-            })
-            
-            TextField("Competition report", text: $comment)
-                .frame(height: 70)
-                
-            
-            HStack {
-                Button(action: {
-                    print("Button 3 tapped")
-                }, label: {
-                    Text("SHARE")
-                        .foregroundColor(.white)
-                        .padding()
-                        .padding([.leading, .trailing], 45)
-                        .background(Color.blue)
-                        .cornerRadius(5)
-                })
-                .buttonStyle(PlainButtonStyle())
-                
-                Spacer()
-                
-                Button(action: {
-                    let shotsValue = shots.joined(separator: ",")
-                    //save training method
-                    DB_Manager().addCompetition(competitionValue: self.competition, placeValue: self.place, dateValue: self.date, shotsValue: shotsValue, scoreValue: self.score, commentValue: self.comment, rifleidValue: self.rifleid)
-                    //back to home menu
-                    self.mode.wrappedValue.dismiss()
-                }, label: {
-                    Text("SAVE")
-                        .foregroundColor(.white)
-                        .padding()
-                        .padding([.leading, .trailing], 45)
-                        .background(Color.blue)
-                        .cornerRadius(5)
-                })
-                .buttonStyle(PlainButtonStyle())
+            .disableAutocorrection(true)
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Coming soon!"), message: Text("Stay tuned for future updates"), dismissButton: .default(Text("Got it!")))
             }
         }
-        .disableAutocorrection(true)
     }
 }
 

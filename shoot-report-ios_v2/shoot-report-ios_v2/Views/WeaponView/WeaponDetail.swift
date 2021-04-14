@@ -37,15 +37,47 @@ struct WeaponDetail: View {
                     Label("Competition", systemImage: "star.fill") }
                 .tag(Tab.competition)
             
-            Text("Tab Content 3")
+            Text("Coming Soon!")
+                .font(.title)
+                .bold()
                 .tabItem { Label("Procedure", systemImage: "list.bullet") }
                 .tag(Tab.procedure)
             
-            Text("Tab Content 4")
+            Text("Coming Soon!")
+                .font(.title)
+                .bold()
                 .tabItem { Label("Goals", systemImage: "flag.fill") }
                 .tag(Tab.goals)
  
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar(content: {
+            
+            ToolbarItemGroup(placement: .navigationBarTrailing, content:  {
+                
+                NavigationLink(
+                    destination: TrainerView(),
+                    label: {
+                        Image(systemName: "person.crop.circle")
+                })
+                
+                if selection == .training {
+                    NavigationLink(
+                        destination: TrainingAdd(rifleid: rifleid),
+                        label: {
+                            Image(systemName: "plus")
+                    })
+                } else if selection == .competition {
+                    NavigationLink(
+                        destination: CompetitionAdd(rifleid: rifleid),
+                        label: {
+                            Image(systemName: "plus")
+                    })
+                }
+            })
+            
+        })
+
     }
 }
 
