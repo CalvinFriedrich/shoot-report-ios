@@ -37,9 +37,7 @@ struct WeaponDetail: View {
                     Label("Competition", systemImage: "star.fill") }
                 .tag(Tab.competition)
             
-            Text("Coming Soon!")
-                .font(.title)
-                .bold()
+            ProcedureView(rifleid: rifleid)
                 .tabItem { Label("Procedure", systemImage: "list.bullet") }
                 .tag(Tab.procedure)
             

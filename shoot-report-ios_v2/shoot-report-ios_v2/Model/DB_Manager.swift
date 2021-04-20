@@ -461,7 +461,7 @@ class DB_Manager {
             
             //loop through all competitions
             for competition in try db.prepare(competitions.filter(weaponid == comp_rifleid)) {
-                let rings = competition[comp_score]
+                var rings = competition[comp_score]
                 let helper:Date = competition[comp_date]
                 let formatter1 = DateFormatter()
                 formatter1.dateStyle = .short
@@ -472,6 +472,7 @@ class DB_Manager {
                     wholeRings.append(rings)
                     wholeDates.append(date)
                 } else {
+                    rings = round(rings * 100) / 100
                     tenthRings.append(rings)
                     tenthDates.append(date)
                 }
