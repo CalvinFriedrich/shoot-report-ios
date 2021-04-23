@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Competition" representedClassName="Competition" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" attributeType="String"/>
+        <attribute name="competitionCase" attributeType="String"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="place" attributeType="String"/>
+        <attribute name="rifleid" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="score" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="shots" attributeType="String"/>
+    </entity>
+    <entity name="Rifle" representedClassName="Rifle" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shown" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Training" representedClassName="Training" syncable="YES" codeGenerationType="class">
+        <attribute name="comment" attributeType="String"/>
+        <attribute name="count" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="moodEmote" attributeType="String" defaultValueString=" "/>
+        <attribute name="place" attributeType="String"/>
+        <attribute name="rifleid" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="score" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="shots" attributeType="String"/>
+        <attribute name="trainingCase" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Competition" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="Rifle" positionX="-63" positionY="45" width="128" height="89"/>
+        <element name="Training" positionX="-54" positionY="54" width="128" height="179"/>
+    </elements>
+</model>
