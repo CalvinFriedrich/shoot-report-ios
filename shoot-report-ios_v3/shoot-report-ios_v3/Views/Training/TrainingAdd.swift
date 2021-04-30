@@ -263,7 +263,7 @@ struct TrainingAdd: View {
             }
             .navigationBarItems(
                 trailing:
-                    Button("Close mich!", action: {
+                    Button("Close", action: {
                         mode.wrappedValue.dismiss()
                     })
             )

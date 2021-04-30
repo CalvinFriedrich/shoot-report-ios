@@ -32,11 +32,13 @@ struct WeaponsListView: View {
         }
         .onAppear(perform: {
             if !UserDefaults.standard.bool(forKey: "is_Preloaded") {
-                addRifle(name: "Rifle 1", order: 1)
-                addRifle(name: "Rifle 2", order: 2)
-                addRifle(name: "Rifle 3", order: 3)
-                addRifle(name: "Rifle 4", order: 4)
-                addRifle(name: "Rifle 5", order: 5)
+                addRifle(name: "Air Rifle", order: 1)
+                addRifle(name: "Air Rifle 3-position", order: 2)
+                addRifle(name: "Light Rifle", order: 3)
+                addRifle(name: "Small Bore Rifle", order: 4)
+                addRifle(name: "Small Bore Rifle 3-position", order: 5)
+                addRifle(name: "Air Pistol", order: 6)
+                addRifle(name: "Light Pistol", order: 7)
 
                 UserDefaults.standard.set(true, forKey: "is_Preloaded")
             }

@@ -224,7 +224,7 @@ struct CompetitionEditor: View {
                 Alert(title: Text("Coming soon!"), message: Text("Stay tuned for future updates"), dismissButton: .default(Text("Got it!")))
             }
             .navigationBarItems(trailing:
-                    Button("Close mich!", action: {
+                    Button("Close", action: {
                         mode.wrappedValue.dismiss()
                     })
             )

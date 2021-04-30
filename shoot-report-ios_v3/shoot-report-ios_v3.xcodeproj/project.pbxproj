@@ -27,6 +27,7 @@
 		BE1EBCD726307048004EFF6B /* TrainingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1EBCD626307048004EFF6B /* TrainingRow.swift */; };
 		BE47788E2630814B00654CA0 /* MoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47788D2630814B00654CA0 /* MoodModel.swift */; };
 		BE4778962631BE2800654CA0 /* TrainingGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4778952631BE2800654CA0 /* TrainingGraph.swift */; };
+		BE52257526385411004AEA1B /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52257426385411004AEA1B /* GoalsView.swift */; };
 		BE9D5126263029E000852EAB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9D5125263029E000852EAB /* Launch Screen.storyboard */; };
 		BE9D512B26302ADD00852EAB /* WeaponsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D512A26302ADD00852EAB /* WeaponsListView.swift */; };
 		BE9D513426302B5600852EAB /* WeaponDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9D513326302B5600852EAB /* WeaponDetail.swift */; };
@@ -40,6 +41,8 @@
 		BED470A92632F43D000A4C49 /* CompetitionGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED470A82632F43D000A4C49 /* CompetitionGraph.swift */; };
 		BED470AE2632F449000A4C49 /* CompetitionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED470AD2632F449000A4C49 /* CompetitionEditor.swift */; };
 		BED470B32632F454000A4C49 /* CompetitionAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED470B22632F454000A4C49 /* CompetitionAdd.swift */; };
+		BED470BC2636F729000A4C49 /* GoalsView_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED470BB2636F729000A4C49 /* GoalsView_old.swift */; };
+		BED470C42636F88B000A4C49 /* GoalsRow_old.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED470C32636F88B000A4C49 /* GoalsRow_old.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,7 @@
 		BE1EBCD626307048004EFF6B /* TrainingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRow.swift; sourceTree = "<group>"; };
 		BE47788D2630814B00654CA0 /* MoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodModel.swift; sourceTree = "<group>"; };
 		BE4778952631BE2800654CA0 /* TrainingGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingGraph.swift; sourceTree = "<group>"; };
+		BE52257426385411004AEA1B /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
 		BE9D5125263029E000852EAB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BE9D512A26302ADD00852EAB /* WeaponsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsListView.swift; sourceTree = "<group>"; };
 		BE9D513326302B5600852EAB /* WeaponDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponDetail.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		BED470A82632F43D000A4C49 /* CompetitionGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionGraph.swift; sourceTree = "<group>"; };
 		BED470AD2632F449000A4C49 /* CompetitionEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionEditor.swift; sourceTree = "<group>"; };
 		BED470B22632F454000A4C49 /* CompetitionAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionAdd.swift; sourceTree = "<group>"; };
+		BED470BB2636F729000A4C49 /* GoalsView_old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView_old.swift; sourceTree = "<group>"; };
+		BED470C32636F88B000A4C49 /* GoalsRow_old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsRow_old.swift; sourceTree = "<group>"; };
 		E917AA20A3FE0B2EDAA7D26A /* Pods-shoot-report-ios_v3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shoot-report-ios_v3.debug.xcconfig"; path = "Target Support Files/Pods-shoot-report-ios_v3/Pods-shoot-report-ios_v3.debug.xcconfig"; sourceTree = "<group>"; };
 		EC99E0705798B7E515069984 /* Pods-shoot-report-ios_v3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shoot-report-ios_v3.release.xcconfig"; path = "Target Support Files/Pods-shoot-report-ios_v3/Pods-shoot-report-ios_v3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +268,7 @@
 				BE1EBCB9263056E0004EFF6B /* Training */,
 				BED470902632F390000A4C49 /* Competition */,
 				BEBF83D326307BBA00F66F41 /* Procedure */,
+				BED470BA2636F706000A4C49 /* Goals */,
 				BEBF83C226307B6600F66F41 /* Trainer */,
 			);
 			path = Views;
@@ -296,6 +303,16 @@
 				BED470AD2632F449000A4C49 /* CompetitionEditor.swift */,
 			);
 			path = Competition;
+			sourceTree = "<group>";
+		};
+		BED470BA2636F706000A4C49 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				BE52257426385411004AEA1B /* GoalsView.swift */,
+				BED470BB2636F729000A4C49 /* GoalsView_old.swift */,
+				BED470C32636F88B000A4C49 /* GoalsRow_old.swift */,
+			);
+			path = Goals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +564,7 @@
 				BEBF83BE26307B6100F66F41 /* TrainerView.swift in Sources */,
 				BE1EBCC826305D00004EFF6B /* TrainingListView.swift in Sources */,
 				BED4709A2632F3B8000A4C49 /* CompetitionListView.swift in Sources */,
+				BE52257526385411004AEA1B /* GoalsView.swift in Sources */,
 				BE0468D92630272900E402C7 /* Persistence.swift in Sources */,
 				BE0468D22630272600E402C7 /* ContentView.swift in Sources */,
 				BEBF83CA26307B8500F66F41 /* WebView.swift in Sources */,
@@ -556,11 +574,13 @@
 				BE1EBCCD26305D1F004EFF6B /* TrainingStatsView.swift in Sources */,
 				BE47788E2630814B00654CA0 /* MoodModel.swift in Sources */,
 				BED4709F2632F40A000A4C49 /* CompetitionRow.swift in Sources */,
+				BED470C42636F88B000A4C49 /* GoalsRow_old.swift in Sources */,
 				BE1EBCBB26305704004EFF6B /* TrainingView.swift in Sources */,
 				BE9D512B26302ADD00852EAB /* WeaponsListView.swift in Sources */,
 				BE1EBCD726307048004EFF6B /* TrainingRow.swift in Sources */,
 				BE9D513426302B5600852EAB /* WeaponDetail.swift in Sources */,
 				BE0468D02630272600E402C7 /* shoot_report_ios_v3App.swift in Sources */,
+				BED470BC2636F729000A4C49 /* GoalsView_old.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
