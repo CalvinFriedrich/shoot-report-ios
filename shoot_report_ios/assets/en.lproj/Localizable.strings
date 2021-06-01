@@ -1,0 +1,196 @@
+// General
+"general_app" = "shoot report";
+"general_close" = "close";
+"general_soon_title" = "Coming soon";
+"general_soon_text" = "This will work soon";
+"general_soon_button" = "Understood";
+
+// Menu
+"menu_export" = "Export";
+"menu_information" = "Information";
+"menu_partner" = "Partner";
+"menu_facebook" = "Facebook";
+"menu_instagram" = "Instagram";
+"menu_add" = "Add";
+"menu_edit" = "Edit";
+
+// Informationen
+"information_header" = "Information";
+"information_section_author" = "Information about the author";
+"information_section_author_title" = "Author";
+"information_section_author_content" = "Markus Burkhardt and Lars Helmuth Probst";
+"information_section_website_title" = "Website";
+"information_section_website_content" = "https://burkhardt-sport.solutions";
+"information_section_version" = "Information about the version";
+"information_section_version_title" = "Version";
+"information_section_build_title" = "Build";
+"information_section_build_content" = "20210525";
+"information_section_source" = "Sources";
+"information_section_source_content" = "Texts of the coach are in accordance with the Trainer-C mass sports training of the \"Deutscher Schützenbund\".";
+
+// Rifle
+"rifle_title" = "shoot report";
+"rifle_1" = "Air Rifle";
+"rifle_2" = "Air Rifle 3-position";
+"rifle_3" = "Light Rifle";
+"rifle_4" = "Small Bore Rifle";
+"rifle_5" = "Small Bore Rifle 3-position";
+"rifle_6" = "Air Pistol";
+
+// Training
+"training_tab" = "TRAINING";
+"training_menu" = "Training";
+"training_statistics" = "STATISTICS";
+"training_details" = "Edit Training";
+"training_add" = "Add Training";
+
+// Training Add
+"training_add_title_mood" = "Evaluation";
+"training_add_title_general" = "General";
+"training_add_kind" = "What did you train?";
+"training_add_kind_setup" = "Set Up";
+"training_add_kind_positioningSetUp" = "Positioning Set Up";
+"training_add_kind_zeroPoint" = "Zero Point";
+"training_add_kind_breathing" = "Breathing";
+"training_add_kind_aiming" = "Aiming";
+"training_add_kind_trigger" = "Trigger/Pressure Course";
+"training_add_kind_coordination" = "Coordination";
+"training_add_kind_phaseTraining" = "Phase Training";
+"training_add_kind_leftPositioning" = "Left Positioning";
+"training_add_kind_performanceTraining" = "Performance Training";
+"training_add_kind_competitionTraining" = "Competition Training";
+"training_add_kind_finalTraining" = "Final Training";
+"training_add_kind_other" = "Other";
+"training_add_location" = "Where did you train?";
+"training_add_date" = "Date";
+"training_add_photo" = "Add Photo";
+"training_add_qrcode" = "Scann QR-Code";
+"training_add_deletephoto" = "Delete Photo";
+"training_add_title_shots" = "Result";
+"training_add_shootcount" = "Number of shots";
+"training_add_shot1" = "Series 1";
+"training_add_shot2" = "Series 2";
+"training_add_shot3" = "Series 3";
+"training_add_shot4" = "Series 4";
+"training_add_shot5" = "Series 5";
+"training_add_shot6" = "Series 6";
+"training_add_shot7" = "Series 7";
+"training_add_shot8" = "Series 8";
+"training_add_shot9" = "Series 9";
+"training_add_title_info" = "Score";
+"training_add_total" = "Total rings:";
+"training_add_average" = "Average:";
+"training_add_title_report" = "Training report";
+"training_add_share" = "Share Training";
+"training_add_save" = "Save Training";
+
+// Training Statistics
+"training_statistics_rings" = "Rings";
+"training_statistics_whole" = "Ø Shot whole rings";
+"training_statistics_whole" = "Ø Shot tenth of a ring";
+
+// Competition
+"competition_tab" = "COMPETITION";
+"competition_menu" = "Competition";
+"competition_statistics" = "STATISTICS";
+"competition_details" = "Edit competition";
+"competition_add" = "Add competition";
+
+// Competition Add
+"competition_add_title_general" = "General";
+"competition_add_kind" = "Which mode did you shoot?";
+"competition_add_kind_league" = "League Competiton";
+"competition_add_kind_round" = "Round Competition";
+"competition_add_kind_championship" = "Championship";
+"competition_add_kind_control" = "Control Competition";
+"competition_add_kind_other" = "Other";
+"competition_add_location" = "Where was your competition?";
+"competition_add_date" = "Date";
+"competition_add_photo" = "Add Photo";
+"competition_add_qrcode" = "Scann QR-Code";
+"competition_add_deletephoto" = "Delete Photo";
+"competition_add_title_shots" = "Result";
+"competition_add_shootcount" = "Number of shots";
+"competition_add_shot1" = "Series 1";
+"competition_add_shot2" = "Series 2";
+"competition_add_shot3" = "Series 3";
+"competition_add_shot4" = "Series 4";
+"competition_add_shot5" = "Series 5";
+"competition_add_shot6" = "Series 6";
+"competition_add_shot7" = "Series 7";
+"competition_add_shot8" = "Series 8";
+"competition_add_shot9" = "Series 9";
+"competition_add_title_info" = "Score";
+"competition_add_total" = "Total rings:";
+"competition_add_title_report" = "Competition report";
+"competition_add_share" = "Share Competition";
+"competition_add_save" = "Save Competition";
+
+// Procedure
+"procedure_tab" = "Procedure";
+"procedure_tab_before" = "PREPARATION";
+"procedure_tab_during" = "SHOT SEQUENCE";
+"procedure_before_section" = "My procedure before competition";
+"procedure_before_title" = "Preparation";
+"procedure_during_section" = "My procedure for the shot";
+"procedure_during_title" = "Shot sepuence";
+
+// Goals
+"goals_tab" = "Goals";
+"goals_tab_whole" = "WHOLES RINGS";
+"goals_tab_tenth" = "TENTH OF A RING";
+"goals_40" = "My goals 40 shots";
+"goals_60" = "My goals 60 shots";
+"goals_jackpot" = "Jackpot";
+"goals_optimistic" = "Optimal";
+"goals_real" = "Real";
+"goals_minimal" = "Minimal";
+"goals_chaos" = "Chaos";
+"goals_input" = "Enter values...";
+
+// Trainer
+"trainer_title" = "Coach";
+"trainer_tab_equipment" = "Equipment";
+"trainer_tab_equipment_clothes" = "CLOTHES";
+"trainer_tab_equipment_equipment" = "EQUIPMENT";
+"trainer_tab_equipment_accessories" = "ACCESSORIES";
+"trainer_tab_tech" = "Technical";
+"trainer_tab_tech_positioning" = "POSITIONING";
+"trainer_tab_tech_procedure" = "PROCEDURE";
+"trainer_tab_mental" = "Mental";
+"trainer_tab_mental_rest" = "REST";
+"trainer_tab_mental_motivation" = "MOTIVATION";
+"trainer_tab_mental_focus" = "FOCUS";
+
+// User Data
+"user_title" = "Master data";
+"user_tab_person" = "PERSON";
+"user_tab_device" = "EQUIPMENT";
+"user_tab_person_gunner" = "Shooter";
+"user_tab_person_name" = "Name";
+"user_tab_person_age" = "Age";
+"user_tab_height" = "Height";
+"user_tab_person_club" = "Club";
+"user_tab_person_club_1" = "1. Club";
+"user_tab_person_club_2" = "2. Club";
+"user_tab_person_trainer" = "Coach";
+"user_tab_person_trainermail" = "E-Mail Coach";
+"user_tab_person_squadtrainer" = "Squad Coach";
+"user_tab_person_squadtraineremail" = "E-Mail Squad Coach";
+"user_device_title" = "Settings on the sports equipment";
+"user_device_data" = "My Data";
+
+// Partner
+"partner_thanks" = "We say THANK YOU!";
+"partner_section" = "Our Partner";
+"partner_buttonContact" = "CONTACT US";
+"partner_bePartner" = "Become our partner now.";
+
+// Statistics
+"statistics_rings" = "Rings";
+"statistics_training_whole_rings" = "Ø Shot whole rings";
+"statistics_training_tenth_rings" = "Ø Shot tenth of a ring";
+"statistics_competition_whole_rings" = "Competition whole rings";
+"statistics_competition_tenth_rings" = "Competition thenth of a ring";
+"statistics_training" = "Ø";
+"statistics_competition" = "Result";

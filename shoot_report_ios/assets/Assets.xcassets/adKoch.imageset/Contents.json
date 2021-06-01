@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Koch-50px.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

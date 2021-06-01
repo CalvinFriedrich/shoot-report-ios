@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "add_circle_green_24dp.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

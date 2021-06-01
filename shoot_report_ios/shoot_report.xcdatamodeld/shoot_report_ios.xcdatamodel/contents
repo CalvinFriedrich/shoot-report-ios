@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Competition" representedClassName="Competition" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="kind" optional="YES" attributeType="String"/>
+        <attribute name="place" optional="YES" attributeType="String"/>
+        <attribute name="report" optional="YES" attributeType="String"/>
+        <attribute name="rifleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="shoot_count" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shoots" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName" customClassName="[Double]"/>
+    </entity>
+    <entity name="Rifle" representedClassName="Rifle" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" defaultValueString="10C0E190-790B-45FA-9ECC-A258D08217FE" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String" defaultValueString="Rifle"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="show" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Training" representedClassName="Training" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="indicator" optional="YES" attributeType="String"/>
+        <attribute name="place" optional="YES" attributeType="String"/>
+        <attribute name="report" optional="YES" attributeType="String"/>
+        <attribute name="rifleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="shoot_count" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="shoots" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromDataTransformerName" customClassName="[Double]"/>
+        <attribute name="training" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Competition" positionX="209.6023559570312" positionY="13.2437744140625" width="128" height="149"/>
+        <element name="Rifle" positionX="-123.9470825195312" positionY="-159.5945434570312" width="128" height="89"/>
+        <element name="Training" positionX="103.6868286132812" positionY="-202.3851928710938" width="124.7489013671875" height="164"/>
+    </elements>
+</model>
