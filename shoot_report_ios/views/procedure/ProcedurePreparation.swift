@@ -17,17 +17,17 @@ struct ProcedurePreparation: View {
                     Text(LocalizedStringKey("procedure_before_title"))
                     TextEditor(text: $before)
                         .onChange(of: before) { newValue in
-                            UserDefaults.standard.set(newValue, forKey: "procedure_before_\(rifle.order)")
+                            UserDefaults.standard.set(newValue, forKey: "procedure_before_\(rifle.pref)")
                         }
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300)
                         .ignoresSafeArea(.keyboard)
-
+                    
                 }
             }
         }
         .listStyle(GroupedListStyle())
         .onAppear(perform: {
-            self.before = UserDefaults.standard.string(forKey: "procedure_before_\(rifle.order)") ?? ""
+            self.before = UserDefaults.standard.string(forKey: "procedure_before_\(rifle.pref)") ?? ""
         })
     }
 }

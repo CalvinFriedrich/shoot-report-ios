@@ -5,8 +5,9 @@ struct WeaponRow: View {
     @ObservedObject var rifle: Rifle
     
     var body: some View {
-        HStack() {
+        HStack {
             Image("icon_weapon")
+                .colorMultiply(Color("imageColor"))
             Text(LocalizedStringKey(rifle.name ?? ""))
         }
     }

@@ -8,6 +8,7 @@ struct TrainingStatistics: View {
     @State var tenth: [Double] = []
     @State var datesWhole: [String] = []
     @State var datesTenth: [String] = []
+    @State var areTenth: Bool = false
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Training.date, ascending: true)], animation: .default)
     private var trainings: FetchedResults<Training>
@@ -29,9 +30,10 @@ struct TrainingStatistics: View {
         datesTenth = []
         
         for training in trainings.reversed() {
-            if(training.rifleId == rifle.id) {
+            if (training.rifleId == rifle.id) {
                 let rings = training.shoots!.reduce(0, +)
                 var average = 0.0
+                areTenth = false
                 if (training.shoot_count != 0) {
                     average = rings / Double(training.shoot_count)
                 }
@@ -40,10 +42,18 @@ struct TrainingStatistics: View {
                 let formatter = DateFormatter()
                 formatter.dateStyle = .short
                 
-                if(rings.truncatingRemainder(dividingBy: 1) == 0 && whole.count < 10) {
+                if (training.shoots?.count != 0) {
+                    for i in training.shoots! {
+                        if (!areTenth && (Double(Int(i)) != i)) {
+                            areTenth = true
+                        }
+                    }
+                }
+                
+                if (!areTenth && whole.count < 10) {
                     whole.append(round(average * 100) / 100)
                     datesWhole.append((formatter.string(from: helper)))
-                } else if (rings.truncatingRemainder(dividingBy: 1) != 0 && tenth.count < 10) {
+                } else if (areTenth && tenth.count < 10) {
                     tenth.append(round(average * 100) / 100)
                     datesTenth.append((formatter.string(from: helper)))
                 }

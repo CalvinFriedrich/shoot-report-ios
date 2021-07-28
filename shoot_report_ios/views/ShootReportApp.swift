@@ -1,8 +1,9 @@
 import SwiftUI
 import Firebase
+import FirebaseAnalytics
 
 @main
-struct shoot_report_iosApp: App {
+struct ShootReportApp: App {
     
     let persistenceController = PersistenceController.shared
     
@@ -19,7 +20,9 @@ struct shoot_report_iosApp: App {
             WeaponList()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
-                .onAppear{sleep(3)}
+                .onAppear {
+                    sleep(3)
+                }
         }
     }
 }

@@ -11,15 +11,15 @@ struct TrainingRow: View {
         Button(action: {
             self.isPresented.toggle()
             self.info = training
-        }){
+        }) {
             HStack(alignment: .center, spacing: 30) {
                 Text(training.indicator ?? "")
                     .frame(width: 30, alignment: .center)
-                self.calcPoints(points: training.shoots ?? [0])
+                calcPoints(points: training.shoots ?? [0])
                     .frame(width: 45, alignment: .leading)
                 VStack(alignment: .leading) {
                     Text(LocalizedStringKey(training.training ?? ""))
-                    Text("\(training.date ?? Date(), formatter: dateFormater), in \(training.place ?? "")")
+                    Text("\(training.date ?? Date(), formatter: dateFormatter), in \(training.place ?? "")")
                 }
                 Spacer()
             }
@@ -28,7 +28,7 @@ struct TrainingRow: View {
     
     private func calcPoints(points: [Double]) -> Text {
         let sum = points.reduce(0, +)
-        if(sum.truncatingRemainder(dividingBy: 1) == 0) {
+        if (sum.truncatingRemainder(dividingBy: 1) == 0) {
             return Text(String(format: "%.0f", sum))
         } else {
             return Text(String(format: "%.1f", sum))
@@ -36,7 +36,7 @@ struct TrainingRow: View {
     }
 }
 
-private let dateFormater: DateFormatter = {
+private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     formatter.timeStyle = .none

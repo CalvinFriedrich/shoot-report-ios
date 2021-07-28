@@ -19,7 +19,6 @@ struct MenuPartnerView: View {
                         }
                         .padding()
                         Spacer()
-                        
                     }
                     HStack {
                         Spacer()
@@ -55,16 +54,6 @@ struct MenuPartnerView: View {
                         Spacer()
                         Link(destination: URL(string: "https://tec-hro.de/schiesssport")!) {
                             Image("adTechro")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
-                        .padding()
-                        Spacer()
-                    }
-                    HStack {
-                        Spacer()
-                        Link(destination: URL(string: "https://www.kksvillingen.de")!) {
-                            Image("adVerein")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                         }

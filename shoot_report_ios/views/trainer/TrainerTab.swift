@@ -12,7 +12,7 @@ struct TrainerTab: UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> WKWebView {
-        return WKWebView()
+        WKWebView()
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
@@ -30,7 +30,7 @@ struct TrainerTab: UIViewRepresentable {
         return locale
     }
     
-    class Coordinator : NSObject, WKNavigationDelegate {
+    class Coordinator: NSObject, WKNavigationDelegate {
         
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             guard let url = navigationAction.request.url else {

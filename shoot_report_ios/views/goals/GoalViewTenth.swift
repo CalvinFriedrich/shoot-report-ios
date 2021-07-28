@@ -32,7 +32,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals40Jackpot)
                             .foregroundColor(.gray)
                             .onChange(of: goals40Jackpot) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_jackpot_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_jackpot_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -47,7 +47,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals40Optimal)
                             .foregroundColor(.gray)
                             .onChange(of: goals40Optimal) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_optimal_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_optimal_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -62,7 +62,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals40Real)
                             .foregroundColor(.gray)
                             .onChange(of: goals40Real) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_real_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_real_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -77,7 +77,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals40Minimal)
                             .foregroundColor(.gray)
                             .onChange(of: goals40Minimal) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_minimal_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_minimal_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -92,7 +92,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals40Chaos)
                             .foregroundColor(.gray)
                             .onChange(of: goals40Chaos) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_chaos_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_40_chaos_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -114,7 +114,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals60Jackpot)
                             .foregroundColor(.gray)
                             .onChange(of: goals60Jackpot) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_jackpot_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_jackpot_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -129,7 +129,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals60Optimal)
                             .foregroundColor(.gray)
                             .onChange(of: goals60Optimal) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_optimal_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_optimal_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -144,7 +144,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals60Real)
                             .foregroundColor(.gray)
                             .onChange(of: goals60Real) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_real_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_real_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -159,7 +159,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals60Minimal)
                             .foregroundColor(.gray)
                             .onChange(of: goals60Minimal) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_minimal_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_minimal_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -174,7 +174,7 @@ struct GoalViewTenth: View {
                         TextField(LocalizedStringKey("goals_input"), text: $goals60Chaos)
                             .foregroundColor(.gray)
                             .onChange(of: goals60Chaos) { newValue in
-                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_chaos_\(rifle.order)")
+                                UserDefaults.standard.set(newValue, forKey: "goals_tenth_60_chaos_\(rifle.pref)")
                             }
                             .keyboardType(.decimalPad)
                     }
@@ -183,16 +183,16 @@ struct GoalViewTenth: View {
         }
         .listStyle(GroupedListStyle())
         .onAppear(perform: {
-            self.goals40Jackpot = UserDefaults.standard.string(forKey: "goals_tenth_40_jackpot_\(rifle.order)") ?? ""
-            self.goals40Optimal = UserDefaults.standard.string(forKey: "goals_tenth_40_optimal_\(rifle.order)") ?? ""
-            self.goals40Real = UserDefaults.standard.string(forKey: "goals_tenth_40_real_\(rifle.order)") ?? ""
-            self.goals40Minimal = UserDefaults.standard.string(forKey: "goals_tenth_40_minimal_\(rifle.order)") ?? ""
-            self.goals40Chaos = UserDefaults.standard.string(forKey: "goals_tenth_40_chaos_\(rifle.order)") ?? ""
-            self.goals60Jackpot = UserDefaults.standard.string(forKey: "goals_tenth_60_jackpot_\(rifle.order)") ?? ""
-            self.goals60Optimal = UserDefaults.standard.string(forKey: "goals_tenth_60_optimal_\(rifle.order)") ?? ""
-            self.goals60Real = UserDefaults.standard.string(forKey: "goals_tenth_60_real_\(rifle.order)") ?? ""
-            self.goals60Minimal = UserDefaults.standard.string(forKey: "goals_tenth_60_minimal_\(rifle.order)") ?? ""
-            self.goals60Chaos = UserDefaults.standard.string(forKey: "goals_tenth_60_chaos_\(rifle.order)") ?? ""
+            self.goals40Jackpot = UserDefaults.standard.string(forKey: "goals_tenth_40_jackpot_\(rifle.pref)") ?? ""
+            self.goals40Optimal = UserDefaults.standard.string(forKey: "goals_tenth_40_optimal_\(rifle.pref)") ?? ""
+            self.goals40Real = UserDefaults.standard.string(forKey: "goals_tenth_40_real_\(rifle.pref)") ?? ""
+            self.goals40Minimal = UserDefaults.standard.string(forKey: "goals_tenth_40_minimal_\(rifle.pref)") ?? ""
+            self.goals40Chaos = UserDefaults.standard.string(forKey: "goals_tenth_40_chaos_\(rifle.pref)") ?? ""
+            self.goals60Jackpot = UserDefaults.standard.string(forKey: "goals_tenth_60_jackpot_\(rifle.pref)") ?? ""
+            self.goals60Optimal = UserDefaults.standard.string(forKey: "goals_tenth_60_optimal_\(rifle.pref)") ?? ""
+            self.goals60Real = UserDefaults.standard.string(forKey: "goals_tenth_60_real_\(rifle.pref)") ?? ""
+            self.goals60Minimal = UserDefaults.standard.string(forKey: "goals_tenth_60_minimal_\(rifle.pref)") ?? ""
+            self.goals60Chaos = UserDefaults.standard.string(forKey: "goals_tenth_60_chaos_\(rifle.pref)") ?? ""
         })
     }
 }

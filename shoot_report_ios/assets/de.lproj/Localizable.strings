@@ -1,5 +1,4 @@
 // General
-"general_app" = "shoot report";
 "general_close" = "schließen";
 "general_soon_title" = "Dies funktioniert bald";
 "general_soon_text" = "Bleib gespannt";
@@ -9,10 +8,9 @@
 "menu_export" = "Exportieren";
 "menu_information" = "Informationen";
 "menu_partner" = "Partner";
+"menu_cooperation" = "Kooperationen";
 "menu_facebook" = "Facebook";
 "menu_instagram" = "Instagram";
-"menu_add" = "Hinzufügen";
-"menu_edit" = "Bearbeiten";
 
 // Informationen
 "information_header" = "Informationen";
@@ -24,7 +22,7 @@
 "information_section_version" = "Informationen über die Version";
 "information_section_version_title" = "Version";
 "information_section_build_title" = "Build";
-"information_section_build_content" = "20210525";
+"information_section_build_content" = "20210914";
 "information_section_source" = "Quellenangaben";
 "information_section_source_content" = "Texte der Trainerfunktion sind in Anlehnung der Trainer-C Breitensportausbildung des Deutschen Schützenbundes.";
 
@@ -33,9 +31,15 @@
 "rifle_1" = "Luftgewehr";
 "rifle_2" = "Luftgewehr 3-Stellung";
 "rifle_3" = "Lichtgewehr";
-"rifle_4" = "Kleinkalibergewehr";
+"rifle_4" = "Kleinkalibergewehr stehend";
 "rifle_5" = "Kleinkalibergewehr 3-Stellung";
 "rifle_6" = "Luftpistole";
+"rifle_7" = "Lichtpistole";
+"rifle_8" = "Luftgewehr aufgelegt";
+"rifle_9" = "Kleinkalibergewehr liegend";
+"rifle_10" = "Kleinkalibergewehr aufgelegt";
+"rifle_11" = "Luftpistole aufgelegt";
+"rifle_12" = "Armbrust";
 
 // Training
 "training_tab" = "TRAINING";
@@ -68,21 +72,15 @@
 "training_add_deletephoto" = "Foto löschen";
 "training_add_title_shots" = "Ergebnis";
 "training_add_shootcount" = "Anzahl Schüsse";
-"training_add_shot1" = "Serie 1";
-"training_add_shot2" = "Serie 2";
-"training_add_shot3" = "Serie 3";
-"training_add_shot4" = "Serie 4";
-"training_add_shot5" = "Serie 5";
-"training_add_shot6" = "Serie 6";
-"training_add_shot7" = "Serie 7";
-"training_add_shot8" = "Serie 8";
-"training_add_shot9" = "Serie 9";
+"training_add_shot %lld" = "Serie %lld";
 "training_add_title_info" = "Resultat";
 "training_add_total" = "Gesamtringzahl:";
 "training_add_average" = "Durchschnitt:";
 "training_add_title_report" = "Trainingsbericht";
 "training_add_share" = "Training teilen";
 "training_add_save" = "Training speichern";
+"training_add_success" = "Training gespeichert!";
+"training_add_edit_success" = "Training aktualisiert!";
 
 // Competition
 "competition_tab" = "WETTKAMPF";
@@ -106,20 +104,14 @@
 "competition_add_deletephoto" = "Foto löschen";
 "competition_add_title_shots" = "Ergebnis";
 "competition_add_shootcount" = "Anzahl Schüsse";
-"competition_add_shot1" = "Serie 1";
-"competition_add_shot2" = "Serie 2";
-"competition_add_shot3" = "Serie 3";
-"competition_add_shot4" = "Serie 4";
-"competition_add_shot5" = "Serie 5";
-"competition_add_shot6" = "Serie 6";
-"competition_add_shot7" = "Serie 7";
-"competition_add_shot8" = "Serie 8";
-"competition_add_shot9" = "Serie 9";
+"competition_add_shot %lld" = "Serie %lld";
 "competition_add_title_info" = "Resultat";
 "competition_add_total" = "Gesamtringzahl:";
 "competition_add_title_report" = "Wettkampfbericht";
 "competition_add_share" = "Wettkampf teilen";
 "competition_add_save" = "Wettkampf speichern";
+"competition_add_success" = "Wettkampf gespeichert!";
+"competition_add_edit_success" = "Wettkampf aktualisiert!";
 
 // Procedure
 "procedure_tab" = "Ablauf";
@@ -180,6 +172,10 @@
 "partner_section" = "Unsere Partner";
 "partner_buttonContact" = "Kontakt";
 "partner_bePartner" = "Werden Sie jetzt Partner von uns.";
+
+// Cooperation
+"cooperation_section" = "Unsere Kooperationen";
+"cooperation_bePartner" = "Kooperieren Sie jetzt mit uns.";
 
 // Statistics
 "statistics_rings" = "Ringe";

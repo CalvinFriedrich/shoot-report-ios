@@ -5,6 +5,7 @@ struct MainView: View {
     enum ModalView {
         case information
         case partner
+        case cooperation
         case addTraining
         case addCompetition
     }
@@ -54,25 +55,29 @@ struct MainView: View {
                     }
                     .tag(Tab.goals)
             }
-            .accentColor(Color("mainColor"))
+            .accentColor(Color("menuColorSelected"))
             Spacer()
             ShareAd()
                 .navigationBarTitle(LocalizedStringKey(rifle.name!))
                 .sheet(isPresented: $showSheet) {
-                    if self.modalView == .information {
+                    if modalView == .information {
                         MenuInformationView()
-                    } else if self.modalView == .partner {
+                    } else if modalView == .partner {
                         MenuPartnerView()
-                    } else if self.modalView == .addTraining {
+                    } else if modalView == .cooperation {
+                        MenuCooperationView()
+                    } else if modalView == .addTraining {
                         TrainingAdd(rifle: rifle)
-                    } else if self.modalView == .addCompetition {
+                    } else if modalView == .addCompetition {
                         CompetitionAdd(rifle: rifle)
                     }
                 }
                 .background(
                     HStack {
-                        NavigationLink(destination: DataView().navigationBarTitle(LocalizedStringKey("user_title")), isActive: $showUserData) {}
-                        NavigationLink(destination: TrainerView().navigationBarTitle(LocalizedStringKey("trainer_title")), isActive: $showTrainer) {}
+                        NavigationLink(destination: DataView().navigationBarTitle(LocalizedStringKey("user_title")), isActive: $showUserData) {
+                        }
+                        NavigationLink(destination: TrainerView().navigationBarTitle(LocalizedStringKey("trainer_title")), isActive: $showTrainer) {
+                        }
                     }
                 )
                 .toolbar {
@@ -87,14 +92,14 @@ struct MainView: View {
                         }) {
                             Image("icon_trainer")
                         }
-                        if self.selection == .training {
+                        if selection == .training {
                             Button(action: {
                                 self.modalView = .addTraining
                                 self.showSheet.toggle()
                             }) {
                                 Image("icon_add")
                             }
-                        } else if self.selection == .competition {
+                        } else if selection == .competition {
                             Button(action: {
                                 self.modalView = .addCompetition
                                 self.showSheet.toggle()
@@ -119,6 +124,12 @@ struct MainView: View {
                                 Text(LocalizedStringKey("menu_partner"))
                             }
                             Button(action: {
+                                self.modalView = .cooperation
+                                self.showSheet.toggle()
+                            }) {
+                                Text(LocalizedStringKey("menu_cooperation"))
+                            }
+                            Button(action: {
                                 openURL(URL(string: "https://www.facebook.com/shoot.report")!)
                             }) {
                                 Text(LocalizedStringKey("menu_facebook"))
@@ -130,6 +141,7 @@ struct MainView: View {
                             }
                         }, label: {
                             Image("icon_menu")
+                                .foregroundColor(.white)
                         })
                     }
                 }

@@ -8,6 +8,7 @@ struct CompetitionStatistics: View {
     @State var tenth: [Double] = []
     @State var datesWhole: [String] = []
     @State var datesTenth: [String] = []
+    @State var areTenth: Bool = false
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Competition.date, ascending: true)], animation: .default)
     private var competitions: FetchedResults<Competition>
@@ -29,16 +30,25 @@ struct CompetitionStatistics: View {
         datesTenth = []
         
         for competition in competitions.reversed() {
-            if(competition.rifleId == rifle.id) {
+            if (competition.rifleId == rifle.id) {
                 let rings = competition.shoots!.reduce(0, +)
+                areTenth = false
                 let helper = competition.date ?? Date()
                 let formatter = DateFormatter()
                 formatter.dateStyle = .short
                 
-                if(rings.truncatingRemainder(dividingBy: 1) == 0 && whole.count < 10) {
+                if (competition.shoots?.count != 0) {
+                    for i in competition.shoots! {
+                        if (!areTenth && (Double(Int(i)) != i)) {
+                            areTenth = true
+                        }
+                    }
+                }
+                
+                if (!areTenth && whole.count < 10) {
                     whole.append(round(rings * 100) / 100)
                     datesWhole.append((formatter.string(from: helper)))
-                } else if (rings.truncatingRemainder(dividingBy: 1) != 0 && tenth.count < 10) {
+                } else if (areTenth && tenth.count < 10) {
                     tenth.append(round(rings * 100) / 100)
                     datesTenth.append((formatter.string(from: helper)))
                 }

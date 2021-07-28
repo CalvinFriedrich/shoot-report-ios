@@ -17,7 +17,7 @@ struct ProcedureShot: View {
                     Text(LocalizedStringKey("procedure_during_title"))
                     TextEditor(text: $during)
                         .onChange(of: during) { newValue in
-                            UserDefaults.standard.set(newValue, forKey: "procedure_during_\(rifle.order)")
+                            UserDefaults.standard.set(newValue, forKey: "procedure_during_\(rifle.pref)")
                         }
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 300)
                         .ignoresSafeArea(.keyboard)
@@ -26,7 +26,7 @@ struct ProcedureShot: View {
         }
         .listStyle(GroupedListStyle())
         .onAppear(perform: {
-            self.during = UserDefaults.standard.string(forKey: "procedure_during_\(rifle.order)") ?? ""
+            self.during = UserDefaults.standard.string(forKey: "procedure_during_\(rifle.pref)") ?? ""
         })
     }
 }

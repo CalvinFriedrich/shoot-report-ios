@@ -42,7 +42,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
             
             for image in results {
-                if image.itemProvider.canLoadObject(ofClass: UIImage.self)  {
+                if image.itemProvider.canLoadObject(ofClass: UIImage.self) {
                     image.itemProvider.loadObject(ofClass: UIImage.self) { (newImage, error) in
                         if let error = error {
                             print(error.localizedDescription)
@@ -54,7 +54,7 @@ struct PhotoPicker: UIViewControllerRepresentable {
                 }
             }
             
-            // dissmiss the picker
+            // dismiss the picker
             parent.isPresented = false
         }
     }

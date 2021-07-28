@@ -10,6 +10,8 @@ class HelperMood {
         case fine = "🙂"
         case happy = "😁"
         
-        var id: String { self.rawValue }
+        var id: String {
+            self.rawValue
+        }
     }
 }

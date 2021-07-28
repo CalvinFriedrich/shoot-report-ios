@@ -11,6 +11,8 @@ class HelperCompetitionKind {
         case control = "competition_add_kind_control"
         case other = "competition_add_kind_other"
         
-        var id: String { self.rawValue }
+        var id: String {
+            self.rawValue
+        }
     }
 }

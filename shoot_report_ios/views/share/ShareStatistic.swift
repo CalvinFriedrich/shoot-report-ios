@@ -3,6 +3,8 @@ import AAInfographics
 
 struct ShareStatistic: UIViewRepresentable {
     
+    @Environment(\.colorScheme) var colorScheme
+    
     @Binding var dataSet: [Double]
     @Binding var dateArray: [String]
     
@@ -11,11 +13,18 @@ struct ShareStatistic: UIViewRepresentable {
     let name: String
     
     func updateUIView(_ uiView: AAChartView, context: Context) {
+        
+        // Set the background color
+        var backgroundColor = Color.white
+        if(colorScheme == .dark) {
+            backgroundColor = Color.gray
+        }
+        
         let aaChartModel = AAChartModel()
             .chartType(.spline)
             .titleStyle(AAStyle().fontWeight(AAChartFontWeightType.bold))
             .zoomType(AAChartZoomType.xy)
-            .backgroundColor("#FFFFFF")
+            .backgroundColor(backgroundColor)
             .yAxisTitle(NSLocalizedString("statistics_rings", comment: ""))
             .categories(dateArray)
             .title(title)
@@ -30,7 +39,7 @@ struct ShareStatistic: UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> AAChartView {
-        return AAChartView()
+        AAChartView()
     }
 }
 
@@ -41,6 +50,6 @@ struct ShareStatistic_Previews: PreviewProvider {
     static let whole = false
     
     static var previews: some View {
-        ShareStatistic(dataSet: .constant(dataSet), dateArray: .constant(dateArray), title: "Tewst", color: "#fff", name: "Ø")
+        ShareStatistic(dataSet: .constant(dataSet), dateArray: .constant(dateArray), title: "Test", color: "#fff", name: "Ø")
     }
 }

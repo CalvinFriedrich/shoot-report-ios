@@ -15,7 +15,7 @@ struct CompetitionListView: View {
     var body: some View {
         List {
             ForEach(competitions) { competition in
-                if(competition.rifleId == rifle.id) {
+                if (competition.rifleId == rifle.id) {
                     CompetitionRow(showSheet: $showSheet, info: $info, competition: competition)
                 }
             }
@@ -29,7 +29,9 @@ struct CompetitionListView: View {
     private func deleteCompetition(offsets: IndexSet) {
         withAnimation {
             viewContext.perform {
-                offsets.map { competitions[$0] }.forEach(viewContext.delete)
+                offsets.map {
+                    competitions[$0]
+                }.forEach(viewContext.delete)
                 do {
                     try viewContext.save()
                 } catch {

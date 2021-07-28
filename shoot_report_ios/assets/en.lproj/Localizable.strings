@@ -1,5 +1,4 @@
 // General
-"general_app" = "shoot report";
 "general_close" = "close";
 "general_soon_title" = "Coming soon";
 "general_soon_text" = "This will work soon";
@@ -9,10 +8,9 @@
 "menu_export" = "Export";
 "menu_information" = "Information";
 "menu_partner" = "Partner";
+"menu_cooperation" = "Cooperations";
 "menu_facebook" = "Facebook";
 "menu_instagram" = "Instagram";
-"menu_add" = "Add";
-"menu_edit" = "Edit";
 
 // Informationen
 "information_header" = "Information";
@@ -24,7 +22,7 @@
 "information_section_version" = "Information about the version";
 "information_section_version_title" = "Version";
 "information_section_build_title" = "Build";
-"information_section_build_content" = "20210525";
+"information_section_build_content" = "20210914";
 "information_section_source" = "Sources";
 "information_section_source_content" = "Texts of the coach are in accordance with the Trainer-C mass sports training of the \"Deutscher Schützenbund\".";
 
@@ -32,10 +30,16 @@
 "rifle_title" = "shoot report";
 "rifle_1" = "Air Rifle";
 "rifle_2" = "Air Rifle 3-position";
-"rifle_3" = "Light Rifle";
+"rifle_3" = "Small Bore Rifle standing";
 "rifle_4" = "Small Bore Rifle";
 "rifle_5" = "Small Bore Rifle 3-position";
 "rifle_6" = "Air Pistol";
+"rifle_7" = "Lichtpistole";
+"rifle_8" = "Air Rifle on a rest";
+"rifle_9" = "Small Bore Rifle prone";
+"rifle_10" = "Small Bore Rifle on a rest";
+"rifle_11" = "Air Pistol on a rest";
+"rifle_12" = "Crossbow";
 
 // Training
 "training_tab" = "TRAINING";
@@ -64,30 +68,19 @@
 "training_add_location" = "Where did you train?";
 "training_add_date" = "Date";
 "training_add_photo" = "Add Photo";
-"training_add_qrcode" = "Scann QR-Code";
+"training_add_qrcode" = "Scan QR-Code";
 "training_add_deletephoto" = "Delete Photo";
 "training_add_title_shots" = "Result";
 "training_add_shootcount" = "Number of shots";
-"training_add_shot1" = "Series 1";
-"training_add_shot2" = "Series 2";
-"training_add_shot3" = "Series 3";
-"training_add_shot4" = "Series 4";
-"training_add_shot5" = "Series 5";
-"training_add_shot6" = "Series 6";
-"training_add_shot7" = "Series 7";
-"training_add_shot8" = "Series 8";
-"training_add_shot9" = "Series 9";
+"training_add_shot %lld" = "Series %lld";
 "training_add_title_info" = "Score";
 "training_add_total" = "Total rings:";
 "training_add_average" = "Average:";
 "training_add_title_report" = "Training report";
 "training_add_share" = "Share Training";
 "training_add_save" = "Save Training";
-
-// Training Statistics
-"training_statistics_rings" = "Rings";
-"training_statistics_whole" = "Ø Shot whole rings";
-"training_statistics_whole" = "Ø Shot tenth of a ring";
+"training_add_success" = "Training saved!";
+"training_add_edit_success" = "Training updated!";
 
 // Competition
 "competition_tab" = "COMPETITION";
@@ -107,24 +100,18 @@
 "competition_add_location" = "Where was your competition?";
 "competition_add_date" = "Date";
 "competition_add_photo" = "Add Photo";
-"competition_add_qrcode" = "Scann QR-Code";
+"competition_add_qrcode" = "Scan QR-Code";
 "competition_add_deletephoto" = "Delete Photo";
 "competition_add_title_shots" = "Result";
 "competition_add_shootcount" = "Number of shots";
-"competition_add_shot1" = "Series 1";
-"competition_add_shot2" = "Series 2";
-"competition_add_shot3" = "Series 3";
-"competition_add_shot4" = "Series 4";
-"competition_add_shot5" = "Series 5";
-"competition_add_shot6" = "Series 6";
-"competition_add_shot7" = "Series 7";
-"competition_add_shot8" = "Series 8";
-"competition_add_shot9" = "Series 9";
+"competition_add_shot %lld" = "Series %lld";
 "competition_add_title_info" = "Score";
 "competition_add_total" = "Total rings:";
 "competition_add_title_report" = "Competition report";
 "competition_add_share" = "Share Competition";
 "competition_add_save" = "Save Competition";
+"competition_add_success" = "Competition saved!";
+"competition_add_edit_success" = "Competition updated!";
 
 // Procedure
 "procedure_tab" = "Procedure";
@@ -185,6 +172,10 @@
 "partner_section" = "Our Partner";
 "partner_buttonContact" = "CONTACT US";
 "partner_bePartner" = "Become our partner now.";
+
+// Cooperation
+"cooperation_section" = "Our Cooperations";
+"cooperation_bePartner" = "Start our Cooperation";
 
 // Statistics
 "statistics_rings" = "Rings";

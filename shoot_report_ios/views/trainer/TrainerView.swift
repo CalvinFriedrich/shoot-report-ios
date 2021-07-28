@@ -20,7 +20,7 @@ struct TrainerView: View {
                         Text(LocalizedStringKey("trainer_tab_mental"))
                     }
             }
-            .accentColor(Color("mainColor"))
+            .accentColor(Color("menuColorSelected"))
             Spacer()
             ShareAd()
         }

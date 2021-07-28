@@ -36,7 +36,6 @@
 		1390B2282625CF2400F15451 /* TrainerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1390B2272625CF2400F15451 /* TrainerTab.swift */; };
 		13A9721326565CC0001E873F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 13A9721226565CC0001E873F /* FirebaseAnalytics */; };
 		13ACD4752645C5E600D7F6BB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13ACD4742645C5E600D7F6BB /* CloudKit.framework */; };
-		13C1A8FF264298CE004FB5B9 /* Preview.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C1A8FE264298CE004FB5B9 /* Preview.xcassets */; };
 		13F1EDC1264EDF010060629D /* DataPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F1EDC0264EDF010060629D /* DataPerson.swift */; };
 		13F1EDC3264EDF4B0060629D /* DataDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F1EDC2264EDF4B0060629D /* DataDevice.swift */; };
 		13F9F09326526D5D00F70425 /* HelperTrainingKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9F09226526D5D00F70425 /* HelperTrainingKind.swift */; };
@@ -50,13 +49,17 @@
 		6F5F340B2628652E0044BD3F /* CompetitionAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F340A2628652E0044BD3F /* CompetitionAdd.swift */; };
 		6F5F340E262865360044BD3F /* TrainingAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F340D262865360044BD3F /* TrainingAdd.swift */; };
 		6F68D4BC26272DB000A48612 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F68D4BE26272DB000A48612 /* Localizable.strings */; };
-		6FA8EB702624816F0015EB11 /* shoot_report_ios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8EB6F2624816F0015EB11 /* shoot_report_ios.swift */; };
+		6F9F358926D8CE4F004961E4 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 6F9F358826D8CE4F004961E4 /* AlertToast */; };
+		6FA8EB702624816F0015EB11 /* ShootReportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8EB6F2624816F0015EB11 /* ShootReportApp.swift */; };
 		6FA8EB722624816F0015EB11 /* WeaponList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8EB712624816F0015EB11 /* WeaponList.swift */; };
 		6FA8EB74262481710015EB11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA8EB73262481710015EB11 /* Assets.xcassets */; };
 		6FA8EB79262481710015EB11 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8EB78262481710015EB11 /* Persistence.swift */; };
 		6FA8EB7C262481710015EB11 /* shoot_report.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8EB7A262481710015EB11 /* shoot_report.xcdatamodeld */; };
 		6FA8EB97262496C20015EB11 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA8EB96262496C20015EB11 /* MainView.swift */; };
 		6FF0F3A7263D7A520079D0FA /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0F3A6263D7A520079D0FA /* NavigationBarModifier.swift */; };
+		BE1BBB3726B1B0ED00B65EF9 /* Preview.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE1BBB3626B1B0ED00B65EF9 /* Preview.xcassets */; };
+		BE1BBB4126BBE4F800B65EF9 /* MenuCooperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1BBB4026BBE4F800B65EF9 /* MenuCooperationView.swift */; };
+		BE1BBB4426BBE9C400B65EF9 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = BE1BBB4326BBE9C400B65EF9 /* Introspect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,7 +91,6 @@
 		1390B2272625CF2400F15451 /* TrainerTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerTab.swift; sourceTree = "<group>"; };
 		13ACD4722645C5E300D7F6BB /* shoot_report_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shoot_report_ios.entitlements; sourceTree = "<group>"; };
 		13ACD4742645C5E600D7F6BB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		13C1A8FE264298CE004FB5B9 /* Preview.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Preview.xcassets; sourceTree = "<group>"; };
 		13F1EDC0264EDF010060629D /* DataPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPerson.swift; sourceTree = "<group>"; };
 		13F1EDC2264EDF4B0060629D /* DataDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDevice.swift; sourceTree = "<group>"; };
 		13F9F09226526D5D00F70425 /* HelperTrainingKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperTrainingKind.swift; sourceTree = "<group>"; };
@@ -104,7 +106,7 @@
 		6F68D4BD26272DB000A48612 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6F68D4C226272E1400A48612 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6FA8EB6C2624816F0015EB11 /* shoot_report_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shoot_report_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FA8EB6F2624816F0015EB11 /* shoot_report_ios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoot_report_ios.swift; sourceTree = "<group>"; };
+		6FA8EB6F2624816F0015EB11 /* ShootReportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootReportApp.swift; sourceTree = "<group>"; };
 		6FA8EB712624816F0015EB11 /* WeaponList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponList.swift; sourceTree = "<group>"; };
 		6FA8EB73262481710015EB11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA8EB78262481710015EB11 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -112,6 +114,8 @@
 		6FA8EB7D262481710015EB11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA8EB96262496C20015EB11 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6FF0F3A6263D7A520079D0FA /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		BE1BBB3626B1B0ED00B65EF9 /* Preview.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Preview.xcassets; sourceTree = "<group>"; };
+		BE1BBB4026BBE4F800B65EF9 /* MenuCooperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCooperationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +124,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1390B2002625747100F15451 /* AAInfographics in Frameworks */,
+				BE1BBB4426BBE9C400B65EF9 /* Introspect in Frameworks */,
 				13ACD4752645C5E600D7F6BB /* CloudKit.framework in Frameworks */,
+				6F9F358926D8CE4F004961E4 /* AlertToast in Frameworks */,
 				13A9721326565CC0001E873F /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +148,7 @@
 			children = (
 				1390B2122625B22300F15451 /* MenuInformationView.swift */,
 				1390B21E2625C36C00F15451 /* MenuPartnerView.swift */,
+				BE1BBB4026BBE4F800B65EF9 /* MenuCooperationView.swift */,
 			);
 			path = menu;
 			sourceTree = "<group>";
@@ -209,7 +216,7 @@
 				6FA8EB89262483DA0015EB11 /* goals */,
 				6FA8EB88262483D20015EB11 /* procedure */,
 				6FA8EB96262496C20015EB11 /* MainView.swift */,
-				6FA8EB6F2624816F0015EB11 /* shoot_report_ios.swift */,
+				6FA8EB6F2624816F0015EB11 /* ShootReportApp.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -308,7 +315,7 @@
 		6FF0F3A3263D69490079D0FA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				13C1A8FE264298CE004FB5B9 /* Preview.xcassets */,
+				BE1BBB3626B1B0ED00B65EF9 /* Preview.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -332,6 +339,8 @@
 			packageProductDependencies = (
 				1390B1FF2625747100F15451 /* AAInfographics */,
 				13A9721226565CC0001E873F /* FirebaseAnalytics */,
+				BE1BBB4326BBE9C400B65EF9 /* Introspect */,
+				6F9F358826D8CE4F004961E4 /* AlertToast */,
 			);
 			productName = shoot_report_ios;
 			productReference = 6FA8EB6C2624816F0015EB11 /* shoot_report_ios.app */;
@@ -364,6 +373,8 @@
 			packageReferences = (
 				1390B1FE2625747100F15451 /* XCRemoteSwiftPackageReference "AAChartKit-Swift" */,
 				13A9721126565CC0001E873F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BE1BBB4226BBE9C300B65EF9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				6F9F358726D8CE4F004961E4 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 6FA8EB6D2624816F0015EB11 /* Products */;
 			projectDirPath = "";
@@ -379,8 +390,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1BBB3726B1B0ED00B65EF9 /* Preview.xcassets in Resources */,
 				1366DD4E2624CD3200E92157 /* Colors.xcassets in Resources */,
-				13C1A8FF264298CE004FB5B9 /* Preview.xcassets in Resources */,
 				135FF0FE26564D95008CBAA3 /* GoogleService-Info.plist in Resources */,
 				6F68D4BC26272DB000A48612 /* Localizable.strings in Resources */,
 				6FA8EB74262481710015EB11 /* Assets.xcassets in Resources */,
@@ -413,6 +424,7 @@
 				1366DD4B2624CAB600E92157 /* CompetitionListView.swift in Sources */,
 				6F41832F26283CAA00E400A8 /* TrainingRow.swift in Sources */,
 				1366DD5D2624D84400E92157 /* CompetitionStatistics.swift in Sources */,
+				BE1BBB4126BBE4F800B65EF9 /* MenuCooperationView.swift in Sources */,
 				1366DD542624D77B00E92157 /* TrainingView.swift in Sources */,
 				1390B2282625CF2400F15451 /* TrainerTab.swift in Sources */,
 				6FA8EB722624816F0015EB11 /* WeaponList.swift in Sources */,
@@ -421,7 +433,7 @@
 				13F9F09526526E7F00F70425 /* HelperCompetitionKind.swift in Sources */,
 				1366DD5A2624D7D900E92157 /* TrainingStatistics.swift in Sources */,
 				13245B702653B2220013D04A /* ProcedurePreparation.swift in Sources */,
-				6FA8EB702624816F0015EB11 /* shoot_report_ios.swift in Sources */,
+				6FA8EB702624816F0015EB11 /* ShootReportApp.swift in Sources */,
 				132B2A26263AD85C00F6C9C1 /* HelperMood.swift in Sources */,
 				6F5F340B2628652E0044BD3F /* CompetitionAdd.swift in Sources */,
 				130D4C3B26395AFA00E19A10 /* GoalViewTenth.swift in Sources */,
@@ -579,7 +591,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = shoot_report_ios/shoot_report_ios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"shoot_report_ios/Preview Content\"";
 				DEVELOPMENT_TEAM = AN347YAH8P;
 				ENABLE_PREVIEWS = YES;
@@ -589,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = de.famprobst.report;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = shoot_report_ios/shoot_report_ios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_ASSET_PATHS = "\"shoot_report_ios/Preview Content\"";
 				DEVELOPMENT_TEAM = AN347YAH8P;
 				ENABLE_PREVIEWS = YES;
@@ -615,7 +627,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = de.famprobst.report;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -652,7 +664,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AAChartModel/AAChartKit-Swift.git";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 6.0.0;
 			};
 		};
@@ -660,8 +672,24 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 8.0.0;
+			};
+		};
+		6F9F358726D8CE4F004961E4 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		BE1BBB4226BBE9C300B65EF9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -676,6 +704,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 13A9721126565CC0001E873F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		6F9F358826D8CE4F004961E4 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6F9F358726D8CE4F004961E4 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+		BE1BBB4326BBE9C400B65EF9 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE1BBB4226BBE9C300B65EF9 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 

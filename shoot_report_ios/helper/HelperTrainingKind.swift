@@ -19,6 +19,8 @@ class HelperTrainingKind {
         case finalTraining = "training_add_kind_finalTraining"
         case other = "training_add_kind_other"
         
-        var id: String { self.rawValue }
+        var id: String {
+            self.rawValue
+        }
     }
 }

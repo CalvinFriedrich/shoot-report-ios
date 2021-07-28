@@ -1,7 +1,10 @@
 import SwiftUI
+import PhotosUI
 
 struct DataPerson: View {
     
+    @State var pickedImages: [UIImage] = []
+    @State var isImagePickerViewPresented = false
     @State var user_name: String = ""
     @State var user_age: String = ""
     @State var user_height: String = ""
@@ -27,6 +30,60 @@ struct DataPerson: View {
                     .onChange(of: user_height) { newValue in
                         UserDefaults.standard.set(newValue, forKey: "user_height")
                     }
+            }
+            
+            Section {
+                if pickedImages.count > 0 {
+                    HStack {
+                        Spacer()
+                        Image(uiImage: pickedImages[0])
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                        Spacer()
+                    }
+                    Button(action: { self.pickedImages = [] }, label: {
+                        HStack {
+                            Spacer()
+                            Text(LocalizedStringKey("training_add_deletephoto"))
+                                .bold()
+                            Spacer()
+                        }
+                    })
+                }
+                Button(action: { self.isImagePickerViewPresented = true }, label: {
+                    HStack {
+                        Spacer()
+                        Text(LocalizedStringKey("training_add_photo"))
+                            .bold()
+                            .foregroundColor(Color.white)
+                        Spacer()
+                    }
+                })
+                .listRowBackground(Color("mainColor"))
+                .onChange(of: pickedImages, perform: { newValue in
+                    if newValue.count != 0 {
+                        let image = newValue[0]
+                        if let data = image.pngData() {
+                            // Create URL
+                            let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                            let url = documents.appendingPathComponent("profile.png")
+                            
+                            do {
+                                // Write to Disk
+                                try data.write(to: url)
+                                
+                                // Store URL in User Defaults
+                                UserDefaults.standard.set(url, forKey: "user_picture")
+                                
+                            } catch {
+                                print("Unable to Write Data to Disk (\(error))")
+                            }
+                        }
+                    } else {
+                        UserDefaults.standard.removeObject(forKey: "user_picture")
+                    }
+                })
+                
             }
             
             Section(header: Text(LocalizedStringKey("user_tab_person_club"))) {
@@ -62,6 +119,10 @@ struct DataPerson: View {
         .listStyle(GroupedListStyle())
         .gesture(DragGesture())
         .onAppear(perform: {
+            if let url = UserDefaults.standard.url(forKey: "user_picture") {
+                let data = try? Data(contentsOf: url)
+                self.pickedImages.append(UIImage(data: data!)!)
+            }
             self.user_name = UserDefaults.standard.string(forKey: "user_name") ?? ""
             self.user_age = UserDefaults.standard.string(forKey: "user_age") ?? ""
             self.user_height = UserDefaults.standard.string(forKey: "user_height") ?? ""
@@ -72,6 +133,9 @@ struct DataPerson: View {
             self.user_squad_trainer = UserDefaults.standard.string(forKey: "user_squad_trainer") ?? ""
             self.user_squad_trainer_mail = UserDefaults.standard.string(forKey: "user_squad_trainer_mail") ?? ""
         })
+        .sheet(isPresented: $isImagePickerViewPresented) {
+            PhotoPicker(pickerResult: $pickedImages, isPresented: $isImagePickerViewPresented)
+        }
     }
 }
 

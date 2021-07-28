@@ -7,13 +7,13 @@ struct CompetitionRow: View {
     
     @ObservedObject var competition: Competition
     
-    var body: some View {     
+    var body: some View {
         Button(action: {
             self.info = competition
             self.showSheet.toggle()
-        }){
+        }) {
             HStack(alignment: .center, spacing: 30) {
-                self.calcPoints(points: competition.shoots ?? [0])
+                calcPoints(points: competition.shoots ?? [0])
                     .frame(width: 45, alignment: .leading)
                 VStack(alignment: .leading) {
                     Text(LocalizedStringKey(competition.kind ?? ""))
@@ -26,7 +26,7 @@ struct CompetitionRow: View {
     
     private func calcPoints(points: [Double]) -> Text {
         let sum = points.reduce(0, +)
-        if(sum.truncatingRemainder(dividingBy: 1) == 0) {
+        if (sum.truncatingRemainder(dividingBy: 1) == 0) {
             return Text(String(format: "%.0f", sum))
         } else {
             return Text(String(format: "%.1f", sum))
